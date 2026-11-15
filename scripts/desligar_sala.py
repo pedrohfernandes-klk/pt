@@ -864,6 +864,13 @@ def main():
                 # com três acertos do M1 e do M5, a camada mais recente, por cima das do M6.
                 # 13/11/2026: e, antes de todas, as duas tarefas do M8 «mais fáceis de fazer» e «tudo junto» no M8 (tarefas_faceis_m8_20261113),
                 # a camada mais recente, por cima das do M7.
+                # 14/11/2026: e, antes de todas, as duas tarefas do M9 «mais fáceis de fazer» e «tudo junto» no M9 (tarefas_faceis_m9_20261114),
+                # com dois acertos (o guia da tarefa do M2 e o índice do M7), a camada mais recente, por cima das do M8.
+                tarefas_faceis_m9 = ROOT / 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'
+                for edit in reversed(json.loads(tarefas_faceis_m9.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: tarefas do M9 mais fáceis de fazer não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 tarefas_faceis_m8 = ROOT / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
                 for edit in reversed(json.loads(tarefas_faceis_m8.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

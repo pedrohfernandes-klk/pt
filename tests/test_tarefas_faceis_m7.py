@@ -50,6 +50,11 @@ from auditoria_20261028 import undo_tarefas_faceis_m7_1113  # noqa: E402
 # dados e as páginas das tarefas do M8) como estavam por baixo dela: desfeita pela auditoria, com contagem estrita. A exigência é a mesma.
 from auditoria_20261028 import undo_tarefas_faceis_m8_1113  # noqa: E402
 M8_DE_CIMA = json.loads((Path(__file__).resolve().parents[1] / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json').read_text('utf-8'))['files']
+# 14/11/2026: por cima da camada do M8 ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114, com o seu teste,
+# tests/test_tarefas_faceis_m9.py), com dois acertos (o guia da tarefa do M2 e o índice do M7). Este teste lê os ficheiros que essa
+# camada muda como estavam por baixo dela: desfeita pela auditoria, com contagem estrita (undo_tarefas_faceis_m8_1113 desfaz primeiro
+# a do M9). A exigência é a mesma.
+M9_DE_CIMA = json.loads((Path(__file__).resolve().parents[1] / 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json').read_text('utf-8'))['files']
 import verificar_camadas  # noqa: E402
 
 CAMADA_REL = 'scripts/tarefas_faceis_m7_20261113.json'
@@ -105,7 +110,8 @@ PROIBIDAS = re.compile(r'\b(professor\w*|jog(o|os|ar|a|as|am|ou)|fichas?|folhas?
 
 def ler(rel):
     texto = (ROOT / rel).read_bytes().decode('utf-8')
-    if rel in M8_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M8
+    # 14/11/2026: e os da camada do M9, que fica por cima de todas (undo_tarefas_faceis_m8_1113 desfá-la primeiro).
+    if rel in M8_DE_CIMA or rel in M9_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M8
         texto = undo_tarefas_faceis_m8_1113(rel, texto)
     return texto
 
@@ -533,7 +539,8 @@ class GeradoresEOutrosModulos(unittest.TestCase):
             # 13/11/2026: os oito ficheiros que a camada do M8 muda nestas pastas (os dados, o enunciado, a grelha e a versão de correção
             # da m8-u1 e da m8-u2) leem-se com essa camada desfeita pela auditoria, com contagem estrita: por baixo dela, são os do main.
             conteudo = (ROOT / rel).read_bytes()
-            if rel in M8_DE_CIMA:
+            # 14/11/2026: e os da camada do M9, que fica por cima de todas (undo_tarefas_faceis_m8_1113 desfá-la primeiro).
+            if rel in M8_DE_CIMA or rel in M9_DE_CIMA:
                 de_cima += 1
                 conteudo = undo_tarefas_faceis_m8_1113(rel, conteudo.decode('utf-8')).encode('utf-8')
                 self.assertNotEqual(conteudo, (ROOT / rel).read_bytes(), rel)
@@ -543,7 +550,8 @@ class GeradoresEOutrosModulos(unittest.TestCase):
         # enunciado e a grelha da m1-u2 e da m5-u1 e a grelha da m5-u2). Todos os outros continuam iguais ao main, byte a byte, e
         # também as versões de correção e os aquecimentos da m1-u2, da m5-u1 e da m5-u2.
         self.assertEqual(iguais, len(nomes) - 17)
-        self.assertEqual(de_cima, 8)  # 13/11/2026: os oito da camada do M8
+        # 14/11/2026: mais os oito da camada do M9 (os dados, o enunciado, a grelha e a versão de correção da m9-u1 e da m9-u2).
+        self.assertEqual(de_cima, 16)  # 13/11/2026: os oito da camada do M8
         self.assertEqual(len([f for f in FICHEIROS if f in nomes]), 17)
         for rel in ('tarefas/m1-u2/correcao/index.html', 'tarefas/m5-u1/correcao/index.html', 'tarefas/m5-u2/correcao/index.html', 'tarefas/m5-u2/index.html',
                     'tarefas/m1-u1/index.html', 'tarefas/m5-u1/aquecimento/index.html', 'tarefas/m3-u2/index.html', 'docs/pedagogia/tarefas-escolha/m5-u2.json'):
@@ -555,10 +563,13 @@ class Camada(unittest.TestCase):
     def test_no_topo_com_manifesto_e_reversivel_ate_a_base(self):
         # 13/11/2026: por cima desta camada ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113): a ordem ganha
         # mais uma posição e esta camada passa a ser a segunda, logo antes da do M6, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
-        self.assertEqual(len(verificar_camadas.LAYERS), 52)
+        # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
+        # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(len(verificar_camadas.LAYERS), 53)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
         self.assertEqual(len(FICHEIROS), 22)
@@ -576,7 +587,8 @@ class Camada(unittest.TestCase):
                 self.assertEqual(desfeito, texto)
         # 13/11/2026: com a camada do M8 desfeita primeiro (partilham os dados das grelhas).
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
-                            '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'],
+                            # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                            '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('0 por aplicar; manifesto em dia', r.stdout)
@@ -605,10 +617,14 @@ class Camada(unittest.TestCase):
             self.assertEqual(fluxo.count(f'--desfazer-antes {m6}'), fluxo.count(f'--desfazer-antes {m7} --desfazer-antes {m6}'), p.name)
             # 13/11/2026: por cima da camada do M7 fica a das tarefas do M8 (tarefas_faceis_m8_20261113): em todas as cadeias, a do M8
             # vem à cabeça e a do M7 logo a seguir, sem nada pelo meio; e a verificação da própria camada do M7 desfaz primeiro a do M8.
+            m9f = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'  # 14/11/2026: a camada das tarefas do M9 mais fáceis de fazer, a mais recente
             m8 = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
-            self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m8} --desfazer-antes {m7}'), p.name)
-            self.assertEqual(fluxo.count(f'--desfazer-antes {m8}'), fluxo.count(f'--verificar --desfazer-antes {m8}'), p.name)
-            self.assertEqual(fluxo.count(f'--manifesto {m7} --verificar'), fluxo.count(f'--manifesto {m7} --verificar --desfazer-antes {m8}\n'), p.name)
+            # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m9f} --desfazer-antes {m8} --desfazer-antes {m7}'), p.name)
+            # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m9f} --desfazer-antes {m8}'), fluxo.count(f'--verificar --desfazer-antes {m9f} --desfazer-antes {m8}'), p.name)
+            # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--manifesto {m7} --verificar'), fluxo.count(f'--manifesto {m7} --verificar --desfazer-antes {m9f} --desfazer-antes {m8}\n'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m6_20261113.*'"), fluxo.count("'scripts/tarefas_faceis_m7_20261113.*'"), p.name)
         # 13/11/2026, revisão: a camada passou a mudar o índice do M7, e o gerador da decisão 148 e os três testes de navegador que leem
         # os índices como eram desfazem-na primeiro, antes da do M6.
@@ -629,9 +645,12 @@ class Camada(unittest.TestCase):
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         # 13/11/2026: por cima desta camada fica a das tarefas do M8 (tarefas_faceis_m8_20261113): nas duas verificações, a do M8 desfaz-se
         # primeiro, com a mesma exigência, sem nada pelo meio.
+        m9f = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'  # 14/11/2026: a camada das tarefas do M9 mais fáceis de fazer, a mais recente
         m8 = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m8} --desfazer-antes {m7}\n', tarefas)
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m7_20261113.json --manifesto {m7} --verificar --desfazer-antes {m8}\n', tarefas)
+        # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m9f} --desfazer-antes {m8} --desfazer-antes {m7}\n', tarefas)
+        # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m7_20261113.json --manifesto {m7} --verificar --desfazer-antes {m9f} --desfazer-antes {m8}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_tarefas_faceis_m7.py' -v\n", tarefas)
         self.assertIn('run: python tests/browser_tarefas_faceis_m7.py\n', tarefas)
         self.assertEqual(tarefas.count('timeout-minutes: 40'), 1)

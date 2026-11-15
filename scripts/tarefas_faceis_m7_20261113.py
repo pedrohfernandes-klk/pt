@@ -167,6 +167,14 @@ def ler(rel):
     # os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
     # ficheiro como ela o deixou).
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 14/11/2026: e por cima da do M8 fica a das tarefas do M9 (tarefas_faceis_m9_20261114), que também muda os dados das grelhas:
+    # desfaz-se antes da do M8, com contagem estrita.
+    m9 = ROOT / 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'
+    if m9.is_file():
+        for e in reversed(json.loads(m9.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: as tarefas do M9 mais fáceis de fazer já não conferem ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     m8 = ROOT / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
     if m8.is_file():
         for e in reversed(json.loads(m8.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

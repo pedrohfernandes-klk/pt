@@ -189,7 +189,8 @@ class Aquecimentos(unittest.TestCase):
                 # 13/11/2026: o mesmo nas duas tarefas do M6 (camada tarefas_faceis_m6_20261113).
                 # 13/11/2026: o mesmo nas três tarefas do M7 (camada tarefas_faceis_m7_20261113).
                 # 13/11/2026: o mesmo nas duas tarefas do M8 (camada tarefas_faceis_m8_20261113).
-                if slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2'):
+                # 14/11/2026: o mesmo nas duas tarefas do M9 (camada tarefas_faceis_m9_20261114).
+                if slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2'):
                     self.assertIn('<ol class="tf-fazer"><li>Faz o aquecimento (10\xa0minutos).<span class="task-aquecer tf-abrir"><a href="aquecimento/">', header)
                     self.assertEqual(tarefa.count('<a href="aquecimento/">'), 1)
                     self.assertNotIn('id="produzir"', header)

@@ -1558,6 +1558,34 @@
   "m9-u1": {
    "modulo": "M9",
    "unidade": 1,
+   "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
+   "trocas_aluno": [
+    [
+     "com núcleo de planificação e síntese de duas linhas fora da contagem.",
+     "com plano e duas linhas finais. Não contam para as palavras: as passagens citadas ou copiadas, o plano e as duas linhas finais."
+    ],
+    [
+     "extensão, identificação, núcleo ou síntese",
+     "extensão, identificação, plano ou duas linhas finais"
+    ],
+    [
+     "a identificação do tema, o núcleo e a síntese",
+     "a identificação do tema, o plano e as duas linhas finais"
+    ],
+    [
+     "separo dele o núcleo e as duas linhas finais",
+     "separo dele o plano e as duas linhas finais"
+    ],
+    [
+     "falta a contagem e o tema",
+     "falta a contagem e a letra do tema"
+    ],
+    [
+     "Não identificar a edição consultada.",
+     "Não indicar a edição que usaste (a editora e o ano)."
+    ]
+   ],
    "titulo": "O poder em cena",
    "produto": "Texto de 200 a 240 palavras, com núcleo de planificação e síntese de duas linhas fora da contagem. Escolhe só o tema A ou B. O aquecimento não conta para a nota.",
    "nota": "Os exemplos são inventados e usam outros casos. Não são respostas à tarefa. Avalia-se o fundamento da leitura, não a concordância com uma opinião esperada. Uma atualização ortográfica coerente na citação não é penalizada se conservar as palavras e o sentido. Os níveis intermédios graduam-se segundo o cumprimento dos descritores; a mesma falha não se desconta duas vezes.",
@@ -1679,6 +1707,38 @@
   "m9-u2": {
    "modulo": "M9",
    "unidade": 2,
+   "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
+   "trocas_aluno": [
+    [
+     "com núcleo de planificação e síntese de duas linhas fora da contagem.",
+     "com plano e duas linhas finais. Não contam para as palavras: as passagens citadas ou copiadas, o plano e as duas linhas finais."
+    ],
+    [
+     "extensão, identificação, núcleo ou síntese",
+     "extensão, identificação, plano ou duas linhas finais"
+    ],
+    [
+     "a identificação do tema, o núcleo e a síntese",
+     "a identificação do tema, o plano e as duas linhas finais"
+    ],
+    [
+     "separo dele o núcleo e as duas linhas finais",
+     "separo dele o plano e as duas linhas finais"
+    ],
+    [
+     "falta a contagem e o tema",
+     "falta a contagem e a letra do tema"
+    ],
+    [
+     "Não identificar a edição consultada.",
+     "Não indicar a edição que usaste (a editora e o ano)."
+    ],
+    [
+     "Repetir a tese como se fosse uma resposta.",
+     "Repetir a decisão como se fosse uma resposta."
+    ]
+   ],
    "titulo": "O que vale preservar",
    "produto": "Texto de 220 a 260 palavras, com núcleo de planificação e síntese de duas linhas fora da contagem. Escolhe só o tema A ou B. O aquecimento não conta para a nota.",
    "nota": "Os exemplos são inventados e usam outros casos. Não são respostas à tarefa. Avalia-se o fundamento da leitura, não a concordância com uma opinião esperada. Uma atualização ortográfica coerente na citação não é penalizada se conservar as palavras e o sentido. Os níveis intermédios graduam-se segundo o cumprimento dos descritores; a mesma falha não se desconta duas vezes.",

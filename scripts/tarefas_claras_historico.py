@@ -52,6 +52,10 @@ TAREFAS_FACEIS_M7 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m7-edits-2
 # mudam os enunciados e os dados da M8-U1 e da M8-U2 e os dados das grelhas (que as camadas do M7, do M6, do M5, do M1 e do M3 também
 # mudam). Pela mesma regra: desfaz-se primeiro, com contagem estrita, quando o texto é o ficheiro como ela o deixou.
 TAREFAS_FACEIS_M8 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json').read_text('utf-8'))['files']
+# 14/11/2026: as duas tarefas do M9 «mais fáceis de fazer» (tarefas_faceis_m9_20261114) ficam por cima de todas, também das do M8, e
+# mudam os enunciados e os dados da M9-U1 e da M9-U2 e os dados das grelhas (que as camadas do M8, do M7, do M6, do M5, do M1 e do M3
+# também mudam). Pela mesma regra: desfaz-se primeiro, com contagem estrita, quando o texto é o ficheiro como ela o deixou.
+TAREFAS_FACEIS_M9 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json').read_text('utf-8'))['files']
 def _sha_lf(text):
     return hashlib.sha256(text.replace('\r\n', '\n').encode()).hexdigest()
 def desfazer_faceis(path, text):
@@ -60,6 +64,12 @@ def desfazer_faceis(path, text):
     página como ela a deixou."""
     p = Path(path)
     rel = p.relative_to(ROOT).as_posix() if p.is_absolute() else p.as_posix()
+    # 14/11/2026: primeiro a camada do M9, que está por cima de todas, também da do M8 (em qualquer dos seus 15 ficheiros).
+    por_cima = TAREFAS_FACEIS_M9.get(rel)
+    if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:
+        for edit in reversed(por_cima['edits']):
+            assert text.count(edit['new']) == edit['occurrences'], f'Tarefas do M9 mais fáceis de fazer não confere: {rel}'
+            text = text.replace(edit['new'], edit['old'])
     # 13/11/2026: primeiro a camada do M8, que está por cima de todas, também da do M7 (em qualquer dos seus 13 ficheiros).
     por_cima = TAREFAS_FACEIS_M8.get(rel)
     if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:

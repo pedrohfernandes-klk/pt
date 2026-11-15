@@ -56,7 +56,8 @@ def main():
                     espaco = '\xa0' if m in (8, 9) else ' '
                     # 13/11/2026: no guia do M8, os tempos decididos pelo docente (camada tarefas_faceis_m8_20261113): 10 de leitura e 55
                     # de produção; no do M9, os de sempre. Nos dois, os quatro blocos têm os mesmos nomes e somam 90 minutos.
-                    ler, produzir = (10, 55) if m == 8 else (5, 60)
+                    # 14/11/2026: e também no guia do M9 (camada tarefas_faceis_m9_20261114): 10 de leitura e 55 de produção.
+                    ler, produzir = (10, 55)
                     assert 10 + ler + produzir + 15 == 90
                     assert page.locator('#blocos .bloco b').all_inner_texts() == [
                         f'Aquecer, 10{espaco}min', f'Ler o enunciado, {ler}{espaco}min', f'Produzir, {produzir}{espaco}min', f'Rever e entregar, 15{espaco}min']
