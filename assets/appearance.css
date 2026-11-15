@@ -143,6 +143,39 @@ body:has(>[data-appearance-floating])::after{content:"";display:block;height:68p
  :root[data-appearance-family="cards"][data-appearance-site="pt"][data-theme]{--acento:#a84939;--campo:#e8967a}
 }
 
+/* 15/11/2026: acabamento visual (Gestalt e movimento curto). Só raios, sombras, espaço entre grupos e transições; não mexe
+   em cores da marca, tipos de letra nem larguras. Todo o movimento está em prefers-reduced-motion: no-preference e
+   nada disto entra em impressão. */
+/* Semelhança: cartões do mesmo tipo com o mesmo raio e a mesma borda. Região comum: o grupo de missões ganha um fundo subtil. */
+.missoes>.missao{border-radius:10px}
+@media screen{
+ .missoes{padding-block:4px}
+ .grupo-topo,.unidade-pedagogica{margin-block-end:clamp(8px,1.5vw,16px)}
+ .unidade-pedagogica{border-radius:12px}
+ details.sec{border-radius:10px}
+}
+/* O foco do teclado é sempre bem visível, com ou sem movimento. */
+:is(a,button,summary,.cz-row,.missao,[tabindex]):focus-visible{outline:3px solid var(--tinta,currentColor);outline-offset:3px}
+@media screen and (prefers-reduced-motion:no-preference){
+ /* As regiões de movimento do Cartaz (data-cz-motion-region) e as ampliações têm o seu próprio movimento: ficam de fora. */
+ /* Realce e elevação ligeira ao passar o rato e ao focar. */
+ :is(.missoes>.missao,.cz-row,.unidade-pedagogica,.chip):not([data-cz-motion-region] *,.epi-ampliar *,[data-cz-motion-region],.epi-ampliar){transition:box-shadow .2s ease-out,transform .2s ease-out,background-color .2s ease-out,border-color .2s ease-out}
+ @media(hover:hover){
+  :is(.missoes>.missao,.cz-row):not([data-cz-motion-region] *,.epi-ampliar *):hover{transform:translateY(-2px);box-shadow:0 6px 16px color-mix(in srgb,currentColor 16%,transparent)}
+ }
+ :is(.missoes>.missao,.cz-row):not([data-cz-motion-region] *,.epi-ampliar *):is(:focus-within,:focus-visible){box-shadow:0 4px 12px color-mix(in srgb,currentColor 14%,transparent)}
+ a:not([data-cz-motion-region] *,.epi-ampliar *){transition:text-decoration-color .15s ease-out,color .15s ease-out}
+ /* Entrada suave por opacidade e translate. */
+ @keyframes epi-entrada{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
+ :is(.missoes>.missao,.cz-row):not([data-cz-motion-region] *,.epi-ampliar *){animation:epi-entrada .24s ease-out backwards}
+ /* Abrir e fechar dos desdobráveis sem saltos. */
+ details:not([data-cz-motion-region] *,.epi-ampliar *)::details-content{opacity:0;transition:opacity .2s ease-out,content-visibility .2s ease-out allow-discrete}
+ details[open]:not([data-cz-motion-region] *,.epi-ampliar *)::details-content{opacity:1}
+ details:not([data-cz-motion-region] *,.epi-ampliar *)>summary{transition:background-color .15s ease-out}
+}
+@media print{
+ .missoes>.missao,.cz-row,details::details-content{animation:none;transition:none;transform:none;translate:none;box-shadow:none}
+}
 /* 30/10/2026: texto corrido justificado, com hifenização automática em português europeu (decisão do docente).
    Só alinhamento e hifenização: a letra, o tamanho, as cores e o espaçamento das linhas não mudam.
    A lista é positiva: entra só o texto corrido (textos das obras, leituras, excertos, explicações e parágrafos das
