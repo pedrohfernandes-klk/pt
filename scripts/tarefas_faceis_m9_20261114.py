@@ -172,7 +172,17 @@ ACHADOS = {
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: por cima desta camada fica a da tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), que
+    # também muda os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
+    # ficheiro como ela o deixou).
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    m4u2 = ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
+    if m4u2.is_file():
+        for e in reversed(json.loads(m4u2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a tarefa m4-u2 com «Tema A ou B» já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
+    return texto
 
 
 DO_COMMIT = False  # com --base-do-commit: a base lê-se do commit de base (para refazer a camada depois de mudar as páginas)

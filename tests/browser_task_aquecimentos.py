@@ -119,7 +119,8 @@ def tarefas(browser, host):
             # 13/11/2026: o mesmo nas três tarefas do M7 (camada tarefas_faceis_m7_20261113).
             # 13/11/2026: o mesmo nas duas tarefas do M8 (camada tarefas_faceis_m8_20261113).
             # 14/11/2026: o mesmo nas duas tarefas do M9 (camada tarefas_faceis_m9_20261114).
-            assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')), slug
+            # 15/11/2026: o mesmo na tarefa da M4-U2 (camada tarefa_m4u2_tema_b_20261115).
+            assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm4-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')), slug
             ligacao = page.locator(f'[data-task-card="{0 if facil else enunciado}"] header .task-aquecer a[href="aquecimento/"]')
             assert ligacao.count() == 1, slug
             if facil:
@@ -136,7 +137,8 @@ def tarefas(browser, host):
                 assert primeiro.is_visible() and primeiro.locator('#aquecer[data-task-warm="cartoes"]').count() == 1
                 destaque = primeiro.locator('.task-aquecer a[href="aquecimento/"]')
                 assert destaque.is_visible()
-                assert page.locator('[data-task-question]').count() == 1
+                # 15/11/2026: a m4-u2 guarda as duas perguntas opcionais de sempre (camada tarefa_m4u2_tema_b_20261115).
+                assert page.locator('[data-task-question]').count() == (2 if slug == 'm4-u2' else 1)
                 # 13/11/2026: na m7-u3 (molde «mais fácil de fazer», camada tarefas_faceis_m7_20261113), os exemplos resolvidos ficam junto
                 # do pedido, num desdobrável com três casos (o exemplo antigo com o verso 1 do Texto 2 saiu).
                 # 13/11/2026, revisão: o verso de «O Infante» explicado fica só na grelha, como no main (dava feito um verso que o texto

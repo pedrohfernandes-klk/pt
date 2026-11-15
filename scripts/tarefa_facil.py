@@ -84,6 +84,11 @@ bloco «Onde está o texto». Chaves novas, todas opcionais; as páginas sem ela
     da m3-u1 continua a tê-las);
   * no material de um tema e no material dos dois temas («temas_material»): «onde», uma lista de blocos «onde_esta» (os dois poemas de
     cada tema da m8-u1; o conto da m8-u2); em «temas_material», «textos» passa a ser opcional.
+
+M4 (15/11/2026, camada tarefa_m4u2_tema_b_20261115: a m4-u2, que era escrita à mão, passa às tarefas de escolha, com «Tema A ou B»).
+Uma chave nova, opcional; as páginas sem ela saem iguais, byte a byte:
+  * «opcionais»: uma lista de perguntas opcionais ({"pergunta", "opcoes"}), como nas tarefas individuais, com «opcional_rotulo»;
+    a m4-u2 guarda assim as duas perguntas opcionais que já tinha, letra a letra.
 """
 import re
 from html import escape
@@ -492,15 +497,25 @@ def pagina(d, com_grelha, head, foot, raiz):
               f'<h2>{f["entrega_titulo"]}</h2>{lista(f["entrega"], "ol", "tf-passos")}</section>\n')
 
     # Cartão «Rever a matéria» (não sai em papel): uma linha por pergunta ou tema e a pergunta opcional de sempre.
-    op = f.get('opcional') or d['opcional']  # 13/11/2026 (M7): a pergunta opcional com as palavras do enunciado novo
+    # 15/11/2026 (m4-u2, camada tarefa_m4u2_tema_b_20261115): a pergunta opcional sai num bloco à parte («quiz»), para a chave «opcionais»;
+    # sem ela, o bloco é o de antes, letra a letra.
+    op = f.get('opcional') or d.get('opcional') or f['opcionais'][0]  # 13/11/2026 (M7): a pergunta opcional com as palavras do enunciado novo
     # 13/11/2026 (M7): os cartões que vêm depois dos temas («O teu texto»).
     depois = ''.join(cartao_pedido(p, f, d, textos) for p in f.get('depois', []))
+    quiz = (f'<details data-task-optional-preparation><summary>{f["opcional_titulo"]}</summary><div class="task-quiz" aria-label="Uma pergunta opcional">\n'
+            f'<article class="task-question" data-task-question="1" aria-labelledby="q1"><h3 id="q1">{op["pergunta"]}</h3>{opcoes(op["opcoes"])}</article>\n'
+            f'<p data-task-status role="status">Respostas exploradas: 0 de 1. Podes rever qualquer escolha.</p></div></details>\n')
+    if f.get('opcionais'):
+        # 15/11/2026 (m4-u2, camada tarefa_m4u2_tema_b_20261115): uma tarefa de escolha que já tinha duas perguntas opcionais
+        # guarda as duas, como as tarefas individuais (pagina_individual). As páginas sem a chave saem iguais, byte a byte.
+        ops = f['opcionais']
+        quiz = (f'<details data-task-optional-preparation><summary>{f["opcional_titulo"]}</summary><div class="task-quiz" aria-label="{f["opcional_rotulo"]}">\n'
+                + ''.join(f'<article class="task-question" data-task-question="{k}" aria-labelledby="q{k}"><h3 id="q{k}">{k}. {o["pergunta"]}</h3>{opcoes(o["opcoes"])}</article>\n'
+                          for k, o in enumerate(ops, 1))
+                + f'<p data-task-status role="status">Respostas exploradas: 0 de {len(ops)}. Podes rever qualquer escolha.</p></div></details>\n')
     rever = (f'<section class="task-section tf-rever" id="apoios" data-task-card-name="Rever a matéria" aria-labelledby="preparacao">'
              f'<h2 id="preparacao">{f["rever_titulo"]}</h2><p class="tf-p">{f["rever_texto"]}</p>'
              + lista([f'<b>{x["para"]}.</b> {x["texto"]}' for x in f['rever']], 'ul', 'tf-rever-lista') + '\n'
-             f'<details data-task-optional-preparation><summary>{f["opcional_titulo"]}</summary><div class="task-quiz" aria-label="Uma pergunta opcional">\n'
-             f'<article class="task-question" data-task-question="1" aria-labelledby="q1"><h3 id="q1">{op["pergunta"]}</h3>{opcoes(op["opcoes"])}</article>\n'
-             f'<p data-task-status role="status">Respostas exploradas: 0 de 1. Podes rever qualquer escolha.</p></div></details>\n'
-             f'</section>\n')
+             + quiz + f'</section>\n')
     assert foot.count('</main>\n') == 1, slug
     return head + comecar + perguntas + tema + depois + fechar + rever + foot.replace('</main>\n', '</main>\n' + IMPRIMIR)

@@ -360,7 +360,8 @@ class CuidadoExame(unittest.TestCase):
                             # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                             # 13/11/2026: por cima das tarefas do M7 mais fáceis de fazer ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                             # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                            '--verificar', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m6-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m5-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m1-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/exame-provas-oficial-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m6-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m5-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m1-edits-20261113.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/exame-provas-oficial-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
                       r.stdout)
@@ -411,17 +412,19 @@ class CuidadoExame(unittest.TestCase):
         # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113): a ordem ganha mais uma posição, com a mesma exigência.
         # 13/11/2026: por cima das tarefas do M7 mais fáceis de fazer ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113): a ordem ganha mais uma posição, com a mesma exigência.
         # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m5_20261113', 'tarefas-faceis-m5-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[5], ('tarefas_faceis_m1_20261113', 'tarefas-faceis-m1-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('tarefas_faceis_m3_20261112', 'tarefas-faceis-m3-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[7], ('exame_provas_oficial_20261112', 'exame-provas-oficial-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[8], ('exame_ligacao_treinos_20261112', 'exame-ligacao-treinos-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[9], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[10], ('cuidado_m9_20261112', 'cuidado-m9-edits-20261112'))
+        # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('tarefas_faceis_m5_20261113', 'tarefas-faceis-m5-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[6], ('tarefas_faceis_m1_20261113', 'tarefas-faceis-m1-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('tarefas_faceis_m3_20261112', 'tarefas-faceis-m3-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[8], ('exame_provas_oficial_20261112', 'exame-provas-oficial-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[9], ('exame_ligacao_treinos_20261112', 'exame-ligacao-treinos-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[10], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[11], ('cuidado_m9_20261112', 'cuidado-m9-edits-20261112'))
         # 12/11/2026: com a ligação «Treinos» na página principal do Exame, as camadas passam a ser mais uma.
         # 12/11/2026: com as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112), as camadas passam a ser mais uma.
         # 12/11/2026: com as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112) no topo, as camadas passam de 46 a 47, todas diferentes.
@@ -431,9 +434,9 @@ class CuidadoExame(unittest.TestCase):
         # 13/11/2026: mais uma camada, a das tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113): 51.
         # 13/11/2026: mais uma camada, a das tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113): 52.
         # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(len(verificar_camadas.LAYERS), 53)
+        self.assertEqual(len(verificar_camadas.LAYERS), 54)
         # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 53)
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 54)
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('cuidado-exame-edits-20261112.json'), sala.index('cuidado-m9-edits-20261112.json'))
         auditoria = ler('tests/auditoria_20261028.py')
@@ -456,6 +459,7 @@ class CuidadoExame(unittest.TestCase):
         # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         t6 = 'tests/fixtures/tarefas-faceis-m6-edits-20261113.json'
         t9f = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'  # 14/11/2026: a camada das tarefas do M9 mais fáceis de fazer, a mais recente
+        t9f_m4u2 = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'  # 15/11/2026: a camada da tarefa m4-u2 com «Tema A ou B», a mais recente
         t8f = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'  # 13/11/2026: a camada das tarefas do M8 mais fáceis de fazer, a mais recente
         t7 = 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'  # 13/11/2026: a camada das tarefas do M7 mais fáceis de fazer, a mais recente
         t5 = 'tests/fixtures/tarefas-faceis-m5-edits-20261113.json'
@@ -475,7 +479,8 @@ class CuidadoExame(unittest.TestCase):
                 # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 13/11/2026: por cima das tarefas do M7 mais fáceis de fazer ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count('--desfazer-antes ' + m9_rel), plano.count(f'--desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}'))
+                # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes ' + m9_rel), plano.count(f'--desfazer-antes {t9f_m4u2} --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}'))
                 # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer e «tudo junto» no M3 (tarefas_faceis_m3_20261112: os enunciados, as grelhas, as correções e os aquecimentos da m3-u1 e da m3-u2, os seus dados, e o guia, o índice e o mapa do M3) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
@@ -483,7 +488,8 @@ class CuidadoExame(unittest.TestCase):
                 # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 13/11/2026: por cima das tarefas do M7 mais fáceis de fazer ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count('--desfazer-antes {m9}'), plano.count('--desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}'))
+                # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes {m9}'), plano.count('--desfazer-antes {t9f_m4u2} --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}'))
                 # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer e «tudo junto» no M3 (tarefas_faceis_m3_20261112: os enunciados, as grelhas, as correções e os aquecimentos da m3-u1 e da m3-u2, os seus dados, e o guia, o índice e o mapa do M3) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
@@ -491,7 +497,8 @@ class CuidadoExame(unittest.TestCase):
                 # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 13/11/2026: por cima das tarefas do M7 mais fáceis de fazer ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                 # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                cadeias += plano.count(f'--desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}') + plano.count('--desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}')
+                # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                cadeias += plano.count(f'--desfazer-antes {t9f_m4u2} --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}') + plano.count('--desfazer-antes {t9f_m4u2} --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}')
         self.assertGreater(cadeias, 80)
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112) passa a camada mais recente, por cima desta; desfaz-se primeiro, com a mesma exigência.
@@ -501,7 +508,8 @@ class CuidadoExame(unittest.TestCase):
         # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 13/11/2026: por cima das tarefas do M7 mais fáceis de fazer ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {ex} --verificar --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt}\n', tarefas)
+        # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {ex} --verificar --desfazer-antes {t9f_m4u2} --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt}\n', tarefas)
         # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer e «tudo junto» no M3 (tarefas_faceis_m3_20261112: os enunciados, as grelhas, as correções e os aquecimentos da m3-u1 e da m3-u2, os seus dados, e o guia, o índice e o mapa do M3) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
@@ -509,7 +517,8 @@ class CuidadoExame(unittest.TestCase):
         # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 13/11/2026: por cima das tarefas do M7 mais fáceis de fazer ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m9_20261112.json --manifesto {m9_rel} --verificar --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex}\n', tarefas)
+        # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m9_20261112.json --manifesto {m9_rel} --verificar --desfazer-antes {t9f_m4u2} --desfazer-antes {t9f} --desfazer-antes {t8f} --desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex}\n', tarefas)
         apoios = ler('.github/workflows/pt-apoios-qa.yml')
         self.assertIn("run: python -m unittest discover -s tests -p 'test_cuidado_exame.py' -v", apoios)
         self.assertIn('run: python tests/browser_cuidado_exame.py', apoios)

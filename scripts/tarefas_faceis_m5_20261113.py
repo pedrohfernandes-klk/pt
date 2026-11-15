@@ -218,6 +218,14 @@ def ler(rel):
     # os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
     # ficheiro como ela o deixou).
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: e por cima da do M9 fica a da tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), que também
+    # muda os dados das grelhas: desfaz-se antes da do M9, com contagem estrita.
+    m4u2 = ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
+    if m4u2.is_file():
+        for e in reversed(json.loads(m4u2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a tarefa m4-u2 com «Tema A ou B» já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     # 13/11/2026: e por cima de todas fica a das tarefas do M7 (tarefas_faceis_m7_20261113), que também muda os dados das grelhas
     # e, nos acertos de 13/11/2026, os dados, o enunciado e a grelha da m5-u1 e a grelha da m5-u2:
     # desfaz-se antes da do M6, com contagem estrita.

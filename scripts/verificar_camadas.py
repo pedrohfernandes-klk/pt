@@ -7,6 +7,11 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 15/11/2026: a tarefa m4-u2 no molde «mais fácil de fazer», com «Tema A ou B» (decisão do docente), e «tudo junto» no M4 (o
+ # aquecimento, o guia da tarefa, o índice, o mapa e o portefólio do M4), com o acerto do M8 (os quatro poemas da m8-u1 estão no
+ # manual: o enunciado, a grelha e o guia), camada mais recente, por cima das tarefas do M9 mais fáceis de fazer (que passa a ser a
+ # segunda), com a qual partilha os dados das grelhas.
+ ('tarefa_m4u2_tema_b_20261115','tarefa-m4u2-tema-b-edits-20261115'),
  # 14/11/2026: as duas tarefas do M9 «mais fáceis de fazer» e «tudo junto» no M9 (os enunciados, as grelhas e as versões de correção
  # da m9-u1 e da m9-u2, os seus dados, e o guia, o portefólio, o índice e o mapa do M9; Memorial do Convento ainda tem direitos de
  # autor e não se copia), com dois acertos (o guia da tarefa do M2 e o índice do M7), camada mais recente, por cima das tarefas do M8

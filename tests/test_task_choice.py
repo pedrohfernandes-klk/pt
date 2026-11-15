@@ -264,11 +264,13 @@ class ChoiceTasks(unittest.TestCase):
         # página publica (sem grelha nem chave da correção) e o gerador é idempotente.
         data = sorted((ROOT / 'docs/pedagogia/tarefas-escolha').glob('*.json'))
         # 29/10/2026 (decisão do docente): junta-se a M7-U3, gerada pelo mesmo script.
-        self.assertEqual([p.stem for p in data], ['m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2'])
+        # 15/11/2026: junta-se a M4-U2 (camada tarefa_m4u2_tema_b_20261115), gerada pelo mesmo script, no molde «mais fácil de fazer»;
+        # o seu contrato está em tests/test_tarefas_faceis_m4.py.
+        self.assertEqual([p.stem for p in data], ['m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm4-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2'])
         for p in data:
             d = json.loads(p.read_text('utf-8'))
             self.assertFalse({'grelha', 'provas', 'notas_docente', 'chave'} & set(d), p.name)
-            self.assertIn(d['slug'], CHOICE)
+            self.assertIn(d['slug'], CHOICE + ['m4-u2'])  # 15/11/2026: a M4-U2, com o seu contrato em tests/test_tarefas_faceis_m4.py
         # 28/10/2026 (revisão do PR #122): gera numa pasta temporária (--saida) e compara byte a byte, sem
         # reescrever a árvore de quem corre os testes.
         with tempfile.TemporaryDirectory() as tmp:

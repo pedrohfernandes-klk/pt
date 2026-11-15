@@ -61,14 +61,24 @@
   "MADALENA: Meu Deus, meu Deus!… Ai, e o retrato de meu marido!… Salvem-me aquele retrato.",
   "(Miranda e outro criado vão para tirar o painel ; uma coluna de fogo salta nas tapeçarias e os afugenta.)",
   "(Miranda e outro criado vão para tirar o painel; uma coluna de fogo salta nas tapeçarias e os afugenta.)",
-  "MANUEL: Parti, parti. As matérias inflamáveis que eu tinha disposto vão-se ateando com espantosa velocidade. Fugi."
+  "MANUEL: Parti, parti. As matérias inflamáveis que eu tinha disposto vão-se ateando com espantosa velocidade. Fugi.",
+  "À fé de escudeiro honrado, senhora D. Madalena, a minha boca não se abre mais.",
+  "Senão a mim.",
+  "Vivo ou morto, Madalena, hei de ver-vos pelo menos ainda uma vez neste mundo.",
+  "Não sei para que são estes mistérios: cuidam que eu hei de ser sempre criança!",
+  "Aquele era D. João de Portugal, um honrado fidalgo, e um valente cavaleiro.",
+  "eu sabia de um saber cá de dentro; ninguém mo tinha dito; e eu queria ficar certa.",
+  "TELMO: O mesmo!… Disse-vos o que sei, e o que é verdade; é um cavaleiro da família de meu outro amo que Deus… que Deus tenha em bom lugar.",
+  "MARIA: E não tem nome o cavaleiro?",
+  "TELMO, embaraçado: Há de ter: mas eu é que…",
+  "MARIA, como quem lhe vai tapar a boca: Agora é que tu ias mentir de todo… cala-te."
  ],
  "cartoes": [
   {
    "t": "ler",
    "rot": "Abre",
    "titulo": "O que viste, o que lês, o que julgas",
-   "html": "<p>Dez minutos com consulta. Para não antecipar a tarefa, tudo aqui é inventado: uma peça com atos e cenas e <i>Porta aberta</i>, uma recriação dessa peça com outra autora. Nada disto descreve <i>TPC</i> nem cita Garrett. As falas inventadas vêm em itálico; na tua apreciação, a citação de Garrett vai entre aspas. Treinas as operações da lição F20: observar, interpretar, julgar com razões, citar com ato e cena e distinguir duas obras. Não conta para a nota.</p>"
+   "html": "<p>Dez minutos com consulta. Para não antecipar a tarefa, tudo aqui é inventado: uma peça com atos e cenas e <i>Porta aberta</i>, uma recriação dessa peça com outra autora. Nada disto descreve <i>TPC</i> nem cita Garrett. As falas inventadas vêm em itálico; no teu texto, a citação de Garrett vai entre aspas. Treinas as operações da lição F20: observar, interpretar, julgar com razões, citar com ato e cena e distinguir duas obras. Não conta para a nota.</p>"
   },
   {
    "t": "emparelhar",
@@ -143,7 +153,7 @@
     "_Fica a cadeira._ (ato II, cena IV)"
    ],
    "c": 2,
-   "f": "A cópia conserva as palavras e o lugar. Aqui, o itálico só marca a fala inventada: na tua apreciação, a citação curta de Garrett vai entre aspas, com o ato e a cena entre parênteses (lição F20).",
+   "f": "A cópia conserva as palavras e o lugar. Aqui, o itálico só marca a fala inventada: no teu texto, a citação curta de Garrett vai entre aspas, com o ato e a cena entre parênteses (lição F20).",
    "fe": [
     "**Essa** não está na fala: uma cópia não acrescenta nem troca palavras.",
     "As palavras estão certas, mas o ato não: é o II, não o III. Com o lugar errado, a citação não se confirma no texto.",
@@ -261,8 +271,8 @@
   {
    "t": "ler",
    "rot": "Para levar",
-   "titulo": "A tua experiência é a fonte",
-   "html": "<p>Na tarefa, dá um título e identifica o espetáculo. Descreve só o momento que comentas e separa o que recordas do que interpretas. Distingue as duas obras: <i>TPC</i> é uma recriação, com outra autoria, e não tem de repetir as cenas de Garrett; não forces correspondências. Entre aspas, só o que copias de Garrett, com ato e cena. Fundamenta cada juízo num pormenor visto, com o vocabulário do teatro. Se usares a alternativa de leitura, identifica essa opção.</p>"
+   "titulo": "O que levas para a tarefa",
+   "html": "<p>Na tarefa, escolhes o tema A ou o tema B. No tema A, dá um título e identifica o espetáculo. Descreve só o momento que comentas e separa o que recordas do que interpretas. Distingue as duas obras: <i>TPC</i> é uma recriação, com outra autoria, e não tem de repetir as cenas de Garrett; não forces correspondências. No tema B, separa o que Telmo diz do que interpretas. Nos dois temas, entre aspas, só o que copias de Garrett, com ato e cena, e cada juízo assenta num pormenor, com o vocabulário do teatro.</p>"
   }
  ]
 }

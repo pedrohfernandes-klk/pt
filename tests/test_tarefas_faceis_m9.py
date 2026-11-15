@@ -44,10 +44,12 @@ sys.path.insert(0, str(ROOT / 'tests'))
 sys.path.insert(0, str(ROOT / 'scripts'))
 from auditoria_20261028 import (undo_tarefas_faceis_m9_1114, undo_tarefas_faceis_m8_1113, undo_tarefas_faceis_m7_1113,  # noqa: E402
                                 undo_tarefas_faceis_m3_1112)
+from auditoria_20261028 import undo_tarefa_m4u2_1115  # noqa: E402  (15/11/2026: a camada da tarefa m4-u2, a mais recente)
 import verificar_camadas  # noqa: E402
 
 CAMADA_REL = 'scripts/tarefas_faceis_m9_20261114.json'
 MANIFESTO_REL = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'
+MANIFESTO_REL_m4u2 = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'  # 15/11/2026: a camada da tarefa m4-u2 com «Tema A ou B», a mais recente
 M8F = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
 M7F = 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'
 M3F = 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json'
@@ -253,8 +255,20 @@ REVER = {
 }
 
 
+# 15/11/2026: por cima desta camada fica a da tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115, com o seu
+# teste, tests/test_tarefas_faceis_m4.py), que muda os dados das grelhas (que esta também muda), o aquecimento da m4-u2, os dados, o
+# enunciado e a grelha da m8-u1, o guia do M8 e o índice, o guia, o mapa e o portefólio do M4. Este teste lê os ficheiros que essa camada
+# muda como estavam por baixo dela: desfeita pela auditoria, com contagem estrita. A exigência é a mesma.
+M4U2F = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
+M4U2_DE_CIMA = json.loads((ROOT / M4U2F).read_text('utf-8'))['files']
+DADOS_M4U2 = 'docs/pedagogia/tarefas-escolha/m4-u2.json'  # 15/11/2026: os dados novos da m4-u2 (não são de nenhuma camada)
+
+
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    if rel in M4U2_DE_CIMA:
+        texto = undo_tarefa_m4u2_1115(rel, texto)
+    return texto
 
 
 def sha_lf(texto):
@@ -621,7 +635,18 @@ class TarefasFaceisM9(unittest.TestCase):
         # Nenhuma lição do M9 diz que o romance está no manual.
         self.assertNotIn('manual', ' '.join(solto(sem_marcas(json.dumps(cartoes(k), ensure_ascii=False))) for k in L if k != '14').lower().replace('manuais/', ''))
         # O molde não ganhou chaves: as do M8 chegam (citações curtas e blocos «onde» no material de cada tema).
-        self.assertEqual(ler('scripts/tarefa_facil.py'), do_main('scripts/tarefa_facil.py'))
+        # 15/11/2026: a camada da tarefa m4-u2 (por cima desta) acrescenta ao molde uma só chave opcional, «opcionais» (as duas perguntas
+        # opcionais da m4-u2); fora desse bloco, o molde é o do main, e as páginas sem a chave saem iguais (test_as_outras_tarefas_nao_mudam).
+        molde = ler('scripts/tarefa_facil.py')
+        ini = molde.index("    if f.get('opcionais'):\n")
+        bloco = molde[ini:molde.index("    rever = (", ini)]
+        sem = molde.replace(bloco, '')
+        self.assertEqual(sem.count("if f.get('opcionais')"), 0)
+        self.assertNotIn("opcionais", do_main('scripts/tarefa_facil.py').split('def pagina(d, com_grelha')[1])
+        # 15/11/2026 (revisão): a exigência do main volta inteira. Desfeitas, letra a letra, as quatro trocas que a camada da tarefa m4-u2
+        # faz no molde (tests/test_tarefas_faceis_m4.py, MOLDE_TROCAS, cada uma com contagem estrita), o molde é o do main, byte a byte.
+        from test_tarefas_faceis_m4 import molde_sem_a_camada  # noqa: E402
+        self.assertEqual(molde_sem_a_camada(molde), do_main('scripts/tarefa_facil.py'))
         self.assertEqual(ler('assets/task-textos.css'), do_main('assets/task-textos.css'))
 
     def test_exemplos_com_outro_caso(self):
@@ -991,13 +1016,16 @@ class TarefasFaceisM9(unittest.TestCase):
         self.assertGreater(len(nomes), 100)
         na_arvore = sorted(p.relative_to(ROOT).as_posix() for pasta in ('tarefas', 'docs/pedagogia/tarefas-escolha', 'docs/pedagogia/aquecimentos',
                                                                       'docs/pedagogia/tarefas-individuais') for p in (ROOT / pasta).rglob('*') if p.is_file())
-        self.assertEqual(sorted(n for n in nomes if n != GRELHAS), na_arvore)
+        # 15/11/2026: na árvore há um ficheiro novo, os dados da m4-u2 (tests/test_tarefas_faceis_m4.py confere-o); todos os outros são os do main.
+        self.assertEqual(sorted(n for n in nomes if n != GRELHAS), [x for x in na_arvore if x != DADOS_M4U2])
+        self.assertIn(DADOS_M4U2, na_arvore)
         iguais = 0
         for rel in nomes:
             if rel in FICHEIROS:
                 continue
             with self.subTest(igual_ao_main=rel):
-                self.assertEqual((ROOT / rel).read_bytes(), subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout)
+                # 15/11/2026: os ficheiros que a camada da tarefa m4-u2 muda comparam-se com ela desfeita (ler), com contagem estrita.
+                self.assertEqual(ler(rel).encode('utf-8') if rel in M4U2_DE_CIMA else (ROOT / rel).read_bytes(), subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout)
                 iguais += 1
         # Nestas pastas, a camada muda nove ficheiros; todos os outros são os do main, byte a byte (as outras onze tarefas de escolha,
         # as duas individuais do M7, as suas grelhas, correções e aquecimentos, e os aquecimentos do M9).
@@ -1022,11 +1050,13 @@ class TarefasFaceisM9(unittest.TestCase):
     # ---------- a camada ----------
 
     def test_camada_fechada_reversivel_e_no_topo(self):
-        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
-        self.assertEqual(len(verificar_camadas.LAYERS), 53)
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 53)
+        # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
+        self.assertEqual(len(verificar_camadas.LAYERS), 54)
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 54)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertIn('não se edita à mão', MANIFESTO['_nota'])
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
@@ -1035,7 +1065,8 @@ class TarefasFaceisM9(unittest.TestCase):
         self.assertEqual(len(FICHEIROS), 21)
         self.assertEqual(len(set(FICHEIROS)), 21)
         self.assertEqual(len(TROCAS), sum(len(v['edits']) for v in MANIFESTO['files'].values()))
-        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar'],
+        # 15/11/2026: confere-se com a camada da tarefa m4-u2, que fica por cima, desfeita primeiro (sem nada pelo meio).
+        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar', '--desfazer-antes', M4U2F],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em 21 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
@@ -1074,7 +1105,8 @@ class TarefasFaceisM9(unittest.TestCase):
             self.assertNotIn(chave, sem_todas)
         # Confere-se também cada camada de baixo com esta desfeita primeiro.
         for camada, manifesto in (('tarefas_faceis_m8_20261113', M8F), ('tarefas_faceis_m7_20261113', M7F)):
-            cadeia = ['--desfazer-antes', MANIFESTO_REL] + (['--desfazer-antes', M8F] if manifesto == M7F else [])
+            # 15/11/2026: e, antes de todas, a da tarefa m4-u2, a mais recente.
+            cadeia = ['--desfazer-antes', M4U2F, '--desfazer-antes', MANIFESTO_REL] + (['--desfazer-antes', M8F] if manifesto == M7F else [])
             r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', f'scripts/{camada}.json', '--manifesto', manifesto, '--verificar'] + cadeia,
                                cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
             self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
@@ -1157,7 +1189,8 @@ class TarefasFaceisM9(unittest.TestCase):
         for p in fluxos:
             fluxo = p.read_text('utf-8')
             self.assertEqual(fluxo.count(f'--desfazer-antes {M8F}'), fluxo.count(f'--desfazer-antes {meu} --desfazer-antes {M8F}'), p.name)
-            self.assertEqual(fluxo.count(f'--desfazer-antes {meu}'), fluxo.count(f'--verificar --desfazer-antes {meu}'), p.name)
+            # 15/11/2026: logo antes desta, a da tarefa m4-u2 (a mais recente), sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--desfazer-antes {meu}'), fluxo.count(f'--verificar --desfazer-antes {M4U2F} --desfazer-antes {meu}'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m8_20261113.*'"), fluxo.count("'scripts/tarefas_faceis_m9_20261114.*'"), p.name)
             self.assertEqual(fluxo.count(f"'{M8F}'"), fluxo.count(f"'{meu}'"), p.name)
             self.assertEqual(fluxo.count("- 'tests/test_tarefas_faceis_m8.py'"), fluxo.count("- 'tests/test_tarefas_faceis_m9.py'"), p.name)
@@ -1175,8 +1208,10 @@ class TarefasFaceisM9(unittest.TestCase):
                     self.assertEqual(texto.count('--desfazer-antes {%s}' % velho), texto.count('--desfazer-antes {%s} --desfazer-antes {%s}' % (novo, velho)))
                     self.assertEqual(texto.count("ROOT/'{%s}'," % velho), texto.count("ROOT/'{%s}',ROOT/'{%s}'," % (novo, velho)))
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m8_20261113.json --manifesto {M8F} --verificar --desfazer-antes {meu}\n', tarefas)
-        self.assertIn(f'python scripts/aplicar_trocas.py {CAMADA_REL} --manifesto {meu} --verificar\n', tarefas)
+        # 15/11/2026: com a camada da tarefa m4-u2 por cima, desfeita primeiro.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m8_20261113.json --manifesto {M8F} --verificar --desfazer-antes {M4U2F} --desfazer-antes {meu}\n', tarefas)
+        # 15/11/2026: com a camada da tarefa m4-u2 por cima, desfeita primeiro.
+        self.assertIn(f'python scripts/aplicar_trocas.py {CAMADA_REL} --manifesto {meu} --verificar --desfazer-antes {M4U2F}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_tarefas_faceis_m9.py' -v\n", tarefas)
         self.assertIn('      - name: Tarefas do M9 mais fáceis de fazer\n        run: python tests/browser_tarefas_faceis_m9.py\n', tarefas)
         self.assertLess(tarefas.index("-p 'test_tarefas_faceis_m8.py'"), tarefas.index("-p 'test_tarefas_faceis_m9.py'"))
