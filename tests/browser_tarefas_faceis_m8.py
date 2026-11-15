@@ -61,9 +61,11 @@ VISIVEL = '''(sel) => { const e = document.querySelector(sel); if (!e) return fa
 
 # 14/11/2026: o fim da linha de fonte de cada bloco «Onde está o texto».
 FIM_FONTE = {('m8-u1', '#texto-1'): 'O poema completo lê-se no manual. A lição' + N + 'F04 também diz onde o ler: cartão «O texto».',
-             ('m8-u1', '#texto-2'): 'A lição' + N + 'F04 diz onde ler o poema completo: cartão «Outra leitura».',
-             ('m8-u1', '#texto-3'): 'A lição' + N + 'F05 diz onde ler o poema completo: cartão «O texto».',
-             ('m8-u1', '#texto-4'): 'A lição' + N + 'F05 diz onde ler o poema completo: cartão «Outra leitura».',
+             # 15/11/2026: decisão do docente (camada tarefa_m4u2_tema_b_20261115): «Adeus», «Prece no Mediterrâneo» e «A verdade
+             # histórica» também estão no manual; as linhas de fonte dos Textos 2, 3 e 4 dizem-no como a do Texto 1, com o cartão da lição.
+             ('m8-u1', '#texto-2'): 'O poema completo lê-se no manual. A lição' + N + 'F04 também diz onde o ler: cartão «Outra leitura».',
+             ('m8-u1', '#texto-3'): 'O poema completo lê-se no manual. A lição' + N + 'F05 também diz onde o ler: cartão «O texto».',
+             ('m8-u1', '#texto-4'): 'O poema completo lê-se no manual. A lição' + N + 'F05 também diz onde o ler: cartão «Outra leitura».',
              ('m8-u2', '#texto-1'): 'O conto completo lê-se no manual.'}
 ANTES_DA_AULA = 'Antes da aula, lê os dois poemas de cada tema.'
 
@@ -110,7 +112,8 @@ def ecra(host, browser, slug):
                 # 14/11/2026: «lê-se no manual» só onde uma lição o confirma («As Palavras», «George»); nos outros três poemas, a linha
                 # diz que cartão da lição dá a publicação. Sem número de página, como antes.
                 assert t['fonte'].endswith(FIM_FONTE[(slug, alvo)]) and not re.search(r'p(ág)?\. ?\d|página \d', t['fonte']), (onde, alvo, t)
-                assert ('manual' in t['fonte']) == ((slug, alvo) in (('m8-u1', '#texto-1'), ('m8-u2', '#texto-1'))), (onde, alvo, t)
+                # 15/11/2026: os quatro poemas da m8-u1 e o conto estão no manual (decisão do docente): todas as linhas de fonte o dizem.
+                assert 'manual' in t['fonte'], (onde, alvo, t)
                 assert t['num'] == 'Texto' + N + alvo[-1], (onde, alvo, t)
             for i in range(len(CARTOES[slug])):
                 ir(page, i)
@@ -213,7 +216,8 @@ def outras_paginas(host, browser):
         assert not erros, erros
         ctx.close()
     ctx, page, erros = contexto(browser, 390, 844, 'light')
-    for slug, onde_li in (('m8-u1', 'Não indicar onde leste os poemas (o manual ou outra edição).'), ('m8-u2', 'Não indicar onde leste o conto (o manual ou outra edição).')):
+    # 15/11/2026: na m8-u1, «o manual, a publicação que a lição indica ou outra edição» (decisão do docente).
+    for slug, onde_li in (('m8-u1', 'Não indicar onde leste os poemas (o manual, a publicação que a lição indica ou outra edição).'), ('m8-u2', 'Não indicar onde leste o conto (o manual ou outra edição).')):
         # A grelha e a versão de correção: as palavras do enunciado novo, a autoavaliação só para o aluno, sem a coluna «Aluno».
         page.goto(f'{host}/tarefas/{slug}/grelha/', wait_until='networkidle')
         texto = page.locator('body').text_content()
@@ -253,8 +257,9 @@ def outras_paginas(host, browser):
     texto = page.locator('#tarefas-das-unidades').text_content()
     assert NAO_CONTAM in texto and re.search(r'10\sminutos de leitura, 55 de produção individual em papel e 15 de revisão', texto), texto
     # 14/11/2026: sem «, no manual» (as lições não dizem que os quatro poemas estão no manual); a ordem de ler antes da aula fica.
-    assert 'núcleo' not in texto and 'nas lições F04 e F05 antes da aula' not in texto and 'antes da aula, no manual' not in texto
-    assert 'lê os dois poemas de cada tema antes da aula. As lições F04 e F05 citam só alguns versos' in texto
+    # 15/11/2026: decisão do docente: os quatro poemas estão no manual; o guia di-lo, e os cartões das lições dizem também onde ler.
+    assert 'núcleo' not in texto and 'nas lições F04 e F05 antes da aula' not in texto
+    assert 'lê os dois poemas de cada tema antes da aula, no manual. As lições F04 e F05 citam só alguns versos' in texto
     page.evaluate('document.querySelector("#arquivo-producoes").open = true')
     for n in (1, 2, 3):
         page.locator(f'button.tarefa[data-n="{n}"]').click()
