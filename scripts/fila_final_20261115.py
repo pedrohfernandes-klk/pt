@@ -4,7 +4,7 @@ exposição ficam ditas como treino, a referência de 2026 diz que a de 2027 ain
 do poema (de 5 em 5) sem contar os rótulos «Mote» e «Voltas». O «Item N da prova» não muda (ver abaixo).
 
 Ficheiros (3):
-- assets/exame/app.js: a linha de alvo da sessão («Meta da sessão: …. Não é um limite do exame.»), a versão para imprimir («Meta da
+- assets/exame/app.js: a linha de alvo da sessão («Meta da sessão: ….», sem a frase «Não é um limite do exame.», que é falsa nas sessões 24 e 25, cujo alvo de 200 a 350 palavras é o limite do Grupo III; nas sessões 20 e 23 a ressalva está no prompt), a versão para imprimir («Meta da
   sessão: …») e a página «Programa e fontes» («A Informação-Prova de 2027 ainda não está disponível.»; os dados, com
   referenceYear 2026, já diziam a verdade e não mudam);
 - assets/exame/sessoes.json: o critério da sessão 20 («Cheguei à meta de treino de 80 a 100 palavras.» em vez de «Respeitei as 80 a
@@ -58,7 +58,7 @@ APP = 'assets/exame/app.js'
 SESSOES = 'assets/exame/sessoes.json'
 F05 = 'm3/licao-m3-f05/index.html'
 
-ACHADO_APP = ('15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão e não um limite do exame; a Informação-Prova '
+ACHADO_APP = ('15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão (a ressalva de que não é limite do exame só vale nas sessões 20 e 23 e está nos seus prompts); a Informação-Prova '
               'de 2026 é a referência e a de 2027 ainda não está disponível.')
 ACHADO_SESSOES = ('15/11/2026: fila final: a síntese de 80 a 100 palavras e a exposição de 200 a 350 palavras são metas de treino da '
                   'sessão, não regras nem itens do exame (nenhuma das provas de 2026 tem item de síntese; o item I.7 não tem limite '
@@ -67,9 +67,9 @@ ACHADO_F05 = ('15/11/2026: fila final: os versos de «Descalça vai para a fonte
               '«Voltas» (3 versos de mote e 2 voltas de 7, 10 versos); os números 5 e 10 estavam duas linhas fora do sítio.')
 
 TROCAS = [
-    (APP, 'Alvo da sessão («Meta da sessão», não limite do exame)',
+    (APP, 'Alvo da sessão («Meta da sessão: ….»)',
      "minutos · '+e(session.writing.target)+'</p>",
-     "minutos. Meta da sessão: '+e(session.writing.target)+'. Não é um limite do exame.</p>", ACHADO_APP),
+     "minutos. Meta da sessão: '+e(session.writing.target)+'.</p>", ACHADO_APP),
     (APP, 'Alvo da sessão na versão para imprimir («Meta da sessão»)',
      "<p>'+e(s.writing.target)+'</p>",
      "<p>Meta da sessão: '+e(s.writing.target)+'.</p>", ACHADO_APP),

@@ -1,7 +1,7 @@
 """15/11/2026: a fila final, camada fila_final_20261115 (assets/exame/app.js, assets/exame/sessoes.json e m3/licao-m3-f05/index.html).
 
 Confere:
-- no Exame, que o alvo de cada sessão é «Meta da sessão» e não limite do exame (a linha da sessão e a versão para imprimir), e que a
+- no Exame, que o alvo de cada sessão é «Meta da sessão: …» (a linha da sessão e a versão para imprimir) sem a frase «Não é um limite do exame.» na origem única (falsa nas sessões 24 e 25), e que a
   página «Programa e fontes» diz que a Informação-Prova de 2027 ainda não está disponível (os dados continuam com referenceYear 2026);
 - nas sessões, que o critério da sessão 20 diz «Cheguei à meta de treino de 80 a 100 palavras.» e não «Respeitei as 80 a 100
   palavras.», que o prompt da sessão 20 diz que é um treino de síntese e não um item do exame, e que o da sessão 23 diz que a extensão é
@@ -59,7 +59,10 @@ MANIFESTO = json.loads(ler(MANIFESTO_REL))
 class FilaFinal(unittest.TestCase):
     def test_exame_o_alvo_e_meta_da_sessao_e_nao_limite_do_exame(self):
         app = ler(APP)
-        self.assertIn("minutos. Meta da sessão: '+e(session.writing.target)+'. Não é um limite do exame.</p>", app)
+        self.assertIn("minutos. Meta da sessão: '+e(session.writing.target)+'.</p>", app)
+        # 15/11/2026: a frase «Não é um limite do exame.» é falsa nas sessões 24 e 25 (200 a 350 palavras é o limite do Grupo III):
+        # não está na origem única das 27 sessões; só os prompts das sessões 20 e 23 a dizem.
+        self.assertNotIn('Não é um limite do exame', app)
         self.assertIn("<p>Meta da sessão: '+e(s.writing.target)+'.</p>", app)
         self.assertNotIn("minutos · '+e(session.writing.target)", app)
         self.assertNotIn("<p>'+e(s.writing.target)+'</p>", app)
@@ -86,6 +89,17 @@ class FilaFinal(unittest.TestCase):
         self.assertIn('em duas obras estudadas', p)
         self.assertIn('texto expositivo de 200 a 350 palavras', ler('scripts/exame_treinos_dados/exposicao.py'))
         self.assertIn('em duas obras estudadas', ler('scripts/exame_treinos_dados/exposicao.py'))
+
+    def test_sessoes_24_e_25_nao_dizem_que_o_alvo_nao_e_limite_do_exame(self):
+        # 15/11/2026: o alvo de 200 a 350 palavras é o limite real do Grupo III (nas duas fases).
+        dados = json.loads(ler(SESSOES))
+        por_id = {s.get('id'): s for s in dados['sessions']}
+        for sid in ('s24', 's25'):
+            w = por_id[sid]['writing']
+            self.assertIn('200', w['target'])
+            self.assertIn('350', w['target'])
+            self.assertNotIn('limite do exame', json.dumps(w, ensure_ascii=False))
+        self.assertNotIn('Não é um limite do exame', ler(APP))
 
     def test_f05_os_numeros_dos_versos(self):
         texto = ler(F05)

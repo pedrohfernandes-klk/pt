@@ -1,11 +1,11 @@
 [
  {
   "ficheiro": "assets/exame/app.js",
-  "local": "Alvo da sessão («Meta da sessão», não limite do exame)",
+  "local": "Alvo da sessão («Meta da sessão: ….»)",
   "antigo": "minutos · '+e(session.writing.target)+'</p>",
-  "novo": "minutos. Meta da sessão: '+e(session.writing.target)+'. Não é um limite do exame.</p>",
+  "novo": "minutos. Meta da sessão: '+e(session.writing.target)+'.</p>",
   "ocorrencias": 1,
-  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão e não um limite do exame; a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
+  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão (a ressalva de que não é limite do exame só vale nas sessões 20 e 23 e está nos seus prompts); a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
  },
  {
   "ficheiro": "assets/exame/app.js",
@@ -13,7 +13,7 @@
   "antigo": "<p>'+e(s.writing.target)+'</p>",
   "novo": "<p>Meta da sessão: '+e(s.writing.target)+'.</p>",
   "ocorrencias": 1,
-  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão e não um limite do exame; a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
+  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão (a ressalva de que não é limite do exame só vale nas sessões 20 e 23 e está nos seus prompts); a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
  },
  {
   "ficheiro": "assets/exame/app.js",
@@ -21,7 +21,7 @@
   "antigo": "indicadas pela DGE.",
   "novo": "indicadas pela DGE. A Informação-Prova de 2027 ainda não está disponível.",
   "ocorrencias": 1,
-  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão e não um limite do exame; a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
+  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão (a ressalva de que não é limite do exame só vale nas sessões 20 e 23 e está nos seus prompts); a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
  },
  {
   "ficheiro": "assets/exame/sessoes.json",
