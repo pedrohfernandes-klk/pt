@@ -127,7 +127,7 @@
   ],
   "entrega_titulo": "Entrega no Teams",
   "rever_titulo": "Se precisares de rever",
-  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. Os quatro poemas ainda têm direitos de autor (Eugénio de Andrade faleceu em 2005, lição F04; Ana Luísa Amaral, em 2022, lição F05): não se copiam. Cada um tem um bloco «Onde está o texto», só com os versos que as lições F04 e F05 já citam, letra a letra, e a linha de fonte, que diz onde ler o poema completo, sem número de página: o manual, só para «As Palavras» (a lição F04 manda usar «a edição do manual»), e, para os quatro, o cartão da lição que dá a publicação. O dossiê antigo (as ligações para as publicações e as condições de consulta) não aparece: as condições passaram a alíneas do plano e do texto, e as publicações continuam nas lições F04 e F05, para onde a linha de fonte e o cartão «Rever a matéria» remetem.",
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. Os quatro poemas ainda têm direitos de autor (Eugénio de Andrade faleceu em 2005, lição F04; Ana Luísa Amaral, em 2022, lição F05): não se copiam. Cada um tem um bloco «Onde está o texto», só com os versos que as lições F04 e F05 já citam, letra a letra, e a linha de fonte, que diz onde ler o poema completo, sem número de página: o manual, só para «As Palavras» (a lição F04 manda usar «a edição do manual»), e, para os quatro, o cartão da lição que dá a publicação. O dossiê antigo (as ligações para as publicações e as condições de consulta) não aparece: as condições passaram a alíneas do plano e do texto, e as publicações continuam nas lições F04 e F05, para onde a linha de fonte e o cartão «Rever a matéria» remetem. 15/11/2026 (camada tarefa_m4u2_tema_b_20261115), decisão do docente: «Adeus», «Prece no Mediterrâneo» e «A verdade histórica» também estão no manual. As linhas de fonte dos Textos 2, 3 e 4 dizem «O poema completo lê-se no manual.», com o cartão da lição, como a do Texto 1; a alínea de onde se leu e a grelha dizem «o manual, a publicação que a lição indica ou outra edição».",
   "fazer": [
    "Faz o aquecimento (10 minutos).",
    "Escolhe um tema: A ou B. Cada tema tem dois poemas.",
@@ -228,8 +228,8 @@
          ]
         }
        ],
-       "fonte": "Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950). A lição F04 diz onde ler o poema completo: cartão «Outra leitura».",
-       "origem": "m8/licao-m8-f04/index.html, cartão 25 («Outra leitura»: os dois versos e a linha de fonte, copiados letra a letra)"
+       "fonte": "Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950). O poema completo lê-se no manual. A lição F04 também diz onde o ler: cartão «Outra leitura».",
+       "origem": "m8/licao-m8-f04/index.html, cartão 25 («Outra leitura»: os dois versos e a linha de fonte, copiados letra a letra); 15/11/2026, decisão do docente: o poema está no manual, e a linha de fonte di-lo como a do Texto 1"
       }
      ],
      "notas": []
@@ -262,8 +262,8 @@
          ]
         }
        ],
-       "fonte": "Ana Luísa Amaral, «Prece no Mediterrâneo», <i>Ágora</i>, Assírio &amp; Alvim, 2019. A lição F05 diz onde ler o poema completo: cartão «O texto».",
-       "origem": "m8/licao-m8-f05/index.html, cartão 3 («O essencial»: «Em vez de peixes, Senhor, / dai-nos a paz», copiado letra a letra); a linha de fonte, do cartão 4 («O texto»); o ano da morte da autora (2022), do cartão 2"
+       "fonte": "Ana Luísa Amaral, «Prece no Mediterrâneo», <i>Ágora</i>, Assírio &amp; Alvim, 2019. O poema completo lê-se no manual. A lição F05 também diz onde o ler: cartão «O texto».",
+       "origem": "m8/licao-m8-f05/index.html, cartão 3 («O essencial»: «Em vez de peixes, Senhor, / dai-nos a paz», copiado letra a letra); a linha de fonte, do cartão 4 («O texto»); o ano da morte da autora (2022), do cartão 2; 15/11/2026, decisão do docente: o poema está no manual, e a linha de fonte di-lo como a do Texto 1"
       },
       {
        "id": "texto-4",
@@ -280,8 +280,8 @@
          ]
         }
        ],
-       "fonte": "Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia &amp; Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023. A lição F05 diz onde ler o poema completo: cartão «Outra leitura».",
-       "origem": "m8/licao-m8-f05/index.html, cartão 24 («Outra leitura»: os quatro versos e a linha de fonte, copiados letra a letra; a linha de fonte sem as páginas da revista)"
+       "fonte": "Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia &amp; Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023. O poema completo lê-se no manual. A lição F05 também diz onde o ler: cartão «Outra leitura».",
+       "origem": "m8/licao-m8-f05/index.html, cartão 24 («Outra leitura»: os quatro versos e a linha de fonte, copiados letra a letra; a linha de fonte sem as páginas da revista); 15/11/2026, decisão do docente: o poema está no manual, e a linha de fonte di-lo como a do Texto 1"
       }
      ],
      "notas": []
@@ -338,7 +338,7 @@
      "Explica o efeito de cada indício.",
      "Relaciona-os: compara os poemas, em vez de escrever dois resumos.",
      "Cita no máximo quatro versos de cada poema.",
-     "Indica onde leste os poemas: o manual ou outra edição.",
+     "Indica onde leste os poemas: o manual, a publicação que a lição indica ou outra edição.",
      "Escreve o total de palavras no fim."
     ],
     "ajudas": [
@@ -388,7 +388,7 @@
    "Confirma que as fotografias mostram o trabalho completo.",
    "Entrega as fotografias na tarefa do Teams."
   ],
-  "rever_texto": "Os poemas não estão nesta página: o cartão do tema diz onde ler cada um. As lições servem para rever a matéria.",
+  "rever_texto": "Os poemas não estão nesta página: leem-se no manual, e o cartão do tema diz também onde ler cada um. As lições servem para rever a matéria.",
   "rever": [
    {
     "para": "Tema A",

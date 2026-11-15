@@ -150,12 +150,14 @@ def assert_task_page(page, before):
     # plano, O teu texto, Fechar e entregar, Rever a matéria), como as outras tarefas de escolha do molde; em papel saem cinco.
     # 14/11/2026: e as duas tarefas do M9 (camada tarefas_faceis_m9_20261114; o contrato do molde novo confere-se em
     # tests/test_tarefas_faceis_m9.py e em tests/browser_tarefas_faceis_m9.py), com os mesmos seis cartões com nome.
-    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')) or not slug, slug
+    # 15/11/2026: e a da M4-U2 (camada tarefa_m4u2_tema_b_20261115; o contrato do molde novo confere-se em tests/test_tarefas_faceis_m4.py
+    # e em tests/browser_tarefas_faceis_m4.py): escolhe primeiro o tema e escreve um só texto, com os cinco cartões com nome da m7-u3.
+    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm4-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')) or not slug, slug
     individual = {'m7-u1': 4, 'm7-u2': 7}.get(slug)
     if individual:
         assert page.locator('[data-task-question]').count() == 2 and page.locator('[data-task-card]').count() == individual, slug
     if choice:
-        assert page.locator('[data-task-card]').count() == (5 if slug == 'm7-u3' else 6 if facil else 4)  # 13/11/2026: a m7-u3, ver abaixo
+        assert page.locator('[data-task-card]').count() == (5 if slug in ('m7-u3', 'm4-u2') else 6 if facil else 4)  # 13/11/2026: a m7-u3, ver abaixo
         assert page.locator('[data-task-card="0"] #aquecer').count() == 1
         assert page.locator('[data-task-card="1"] #produzir').count() == 1
         assert page.locator('[data-task-theme]').count() == 2
@@ -176,7 +178,7 @@ def assert_task_page(page, before):
             assert page.get_by_role('heading', name=re.compile('^Tema ' + letter + ' ')).count() == 1, letter
         open_task_card(page, '[data-task-card="0"]')
     if compact:
-        assert page.locator('[data-task-card]').count() == (individual or (5 if slug == 'm7-u3' else 6 if facil else 4 if choice else 3))  # 13/11/2026
+        assert page.locator('[data-task-card]').count() == (individual or (5 if slug in ('m7-u3', 'm4-u2') else 6 if facil else 4 if choice else 3))  # 13/11/2026
         assert page.locator('.task-clock').count() == 0
         assert 'Tarefa individual' in page.locator('.task-kicker').first.text_content()
         assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')

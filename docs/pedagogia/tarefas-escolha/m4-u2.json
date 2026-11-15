@@ -1,0 +1,425 @@
+{
+ "slug": "m4-u2",
+ "titulo": "O espetáculo ou Telmo, em <i>Frei Luís de Sousa</i>",
+ "unidade": 2,
+ "nao_partir": true,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "ligacao": "Abrir o aquecimento em cartões"
+ },
+ "fecho": "Fecha com duas linhas: o que aprendeste e onde se vê essa aprendizagem no teu trabalho.",
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "producao_minutos": 55,
+  "descricao": "aquecimento e um texto sobre Frei Luís de Sousa, com um tema à escolha: a apreciação crítica do espetáculo ou um texto de opinião sobre Telmo",
+  "folha_versao": "20261113-facil-12",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams: o texto e as duas linhas finais."
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "rever_titulo": "Se precisares de rever",
+  "_nota": "15/11/2026 (camada tarefa_m4u2_tema_b_20261115): a página da tarefa, antes escrita à mão, sai desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos). Decisões do docente: a tarefa passa a «Tema A ou B»; o tema A é a apreciação crítica do espetáculo que já existia (o mesmo pedido, as mesmas 180 a 240 palavras, o mesmo espetáculo); o tema B é o texto de opinião sobre a pergunta escolhida pelo docente, letra a letra; os dois têm os mesmos critérios; sai a opção «Se não foste ao teatro». As falas de Garrett são só as que as lições do M4 citam, letra a letra. «fecho» fica só porque o gerador o exige. As duas perguntas opcionais são as de antes, letra a letra.",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Escolhe um tema: A ou B. Os dois são sobre <i>Frei Luís de Sousa</i>.",
+   "Escreve o teu texto.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "nao_partir_dossie": false,
+  "juntos_em_papel": true,
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     "55 min",
+     "Texto (tema A ou B)",
+     "180 a 240"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "180 a 240"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê os dois temas e o que o texto leva. As falas da peça<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
+    "Não contam para as palavras: as passagens citadas ou copiadas e as duas linhas finais."
+   ]
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "<i>Frei Luís de Sousa</i>, ato II, cena I: o retrato",
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "MARIA: Oh! mas é verdade… vinde cá: (Leva-o diante dos três retratos que estão no fundo; e apontando para o de D. João) de quem é este retrato aqui, Telmo?",
+      "partes": [
+       "MARIA: Oh! mas é verdade… vinde cá: (Leva-o diante dos três retratos que estão no fundo; e apontando para o de D. João) de quem é este retrato aqui, Telmo?"
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "TELMO, olha, e vira a cara de repente: Esse é… há de ser… é um da família, destes senhores da casa de Vimioso que aqui estão tantos.",
+      "partes": [
+       "TELMO, olha, e vira a cara de repente: Esse é… há de ser… é um da família, destes senhores da casa de Vimioso que aqui estão tantos."
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "MARIA, ameaçando-o com o dedo: Tu não dizes a verdade, Telmo.",
+      "partes": [
+       "MARIA, ameaçando-o com o dedo: Tu não dizes a verdade, Telmo."
+      ]
+     },
+     {
+      "n": "[4]",
+      "t": "TELMO, quase ofendido: Eu nunca menti, senhora D. Maria de Noronha.",
+      "partes": [
+       "TELMO, quase ofendido: Eu nunca menti, senhora D. Maria de Noronha."
+      ]
+     },
+     {
+      "n": "[5]",
+      "t": "MARIA: Mas não diz a verdade toda o senhor Telmo Pais; que é quase o mesmo.",
+      "partes": [
+       "MARIA: Mas não diz a verdade toda o senhor Telmo Pais; que é quase o mesmo."
+      ]
+     },
+     {
+      "n": "[6]",
+      "t": "TELMO: O mesmo!… Disse-vos o que sei, e o que é verdade; é um cavaleiro da família de meu outro amo que Deus… que Deus tenha em bom lugar.",
+      "partes": [
+       "TELMO: O mesmo!… Disse-vos o que sei, e o que é verdade; é um cavaleiro da família de meu outro amo que Deus… que Deus tenha em bom lugar."
+      ]
+     },
+     {
+      "n": "[7]",
+      "t": "MARIA: E não tem nome o cavaleiro?",
+      "partes": [
+       "MARIA: E não tem nome o cavaleiro?"
+      ]
+     },
+     {
+      "n": "[8]",
+      "t": "TELMO, embaraçado: Há de ter: mas eu é que…",
+      "partes": [
+       "TELMO, embaraçado: Há de ter: mas eu é que…"
+      ]
+     },
+     {
+      "n": "[9]",
+      "t": "MARIA, como quem lhe vai tapar a boca: Agora é que tu ias mentir de todo… cala-te.",
+      "partes": [
+       "MARIA, como quem lhe vai tapar a boca: Agora é que tu ias mentir de todo… cala-te."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "vinde cá",
+      "venha cá"
+     ],
+     [
+      "D. João",
+      "D. João de Portugal, primeiro marido de Madalena, dado por morto em Alcácer Quibir"
+     ],
+     [
+      "casa de Vimioso",
+      "a família de D. João"
+     ]
+    ],
+    "fonte": "Almeida Garrett, <i>Frei Luís de Sousa</i> (1844), ato II, cena I, ortografia atualizada. As falas [1] a [5] estão na lição F26, cartão «O texto» (B. O retrato); as falas [6] a [9], no mesmo cartão, em «Ler mais». A peça inteira lê-se no livro.",
+    "origem": "m4/licao-m4-f26/index.html, cartão 13 («O texto», «B. O retrato»: as falas [1] a [5] e o vocabulário, copiados letra a letra; as falas [6] a [9], de «Ler mais», «A conversa continua:», copiadas letra a letra). As falas [1] a [5] são as mesmas, letra a letra, na lição F08 (cartão 2, «O texto») e em «Quem sabia, e quando» (cartão 10); as falas [6] a [9], na lição F08 (cartão 4, «Decide», em «Ler mais»)."
+   }
+  ],
+  "perguntas": [],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Um só texto: 180 a 240 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas_relogio": "Começa este relógio depois da leitura.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "Apreciação crítica do espetáculo",
+    "intro": "Escreve uma apreciação crítica, com título, sobre <i>TPC: Frei Luís de Sousaaa</i>, de Raquel Castro, visto no LU.CA.",
+    "antes": [
+     "O espetáculo: <i>TPC: Frei Luís de Sousaaa</i>, com texto e encenação de Raquel Castro, a partir de Garrett, no LU.CA Teatro Luís de Camões (lição F20, cartão «Rever o espetáculo»).",
+     "Para citar Garrett, usa os <a href=\"#texto-1\">Textos 1 e 2</a>, por baixo dos temas, ou o livro."
+    ],
+    "passos": [
+     "Lembra-te do espetáculo e relê as notas do teu caderno.",
+     "Faz as alíneas a) a e) do cartão «O teu texto»."
+    ],
+    "material": {
+     "exemplos": [
+      {
+       "titulo": "Um caso inventado: uma récita da escola",
+       "contexto": "Caso inventado, só para mostrar a forma. Não descreve <i>TPC</i> nem cita Garrett.",
+       "paragrafos": [
+        {
+         "al": "Um momento:",
+         "t": "Na récita da escola, na cena da despedida, as cinco personagens vestem o mesmo casaco cinzento."
+        },
+        {
+         "al": "Uma opinião com um pormenor e uma palavra do teatro:",
+         "t": "O figurino funciona: com os casacos iguais, as personagens não se distinguem, e a despedida parece ser de todos."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "Telmo e o retrato",
+    "intro": "Escreve um texto de opinião sobre esta pergunta: «Que juízo merece Telmo, quando cala o nome do retrato no ato II de <i>Frei Luís de Sousa</i>: cumpre a palavra dada ou engana Maria?»",
+    "antes": [
+     "O diálogo do retrato é o <a href=\"#texto-1\">Texto 1</a>, por baixo dos temas. Outras falas que as lições citam estão no Texto 2.",
+     "A lição F27 resume assim a promessa (é um resumo, não uma fala da peça): «Telmo, aio de D. João de Portugal, prometeu a Madalena não alimentar a dúvida sobre a morte dele.»"
+    ],
+    "passos": [
+     "Lê o Texto 1 e escolhe as falas que te ajudam a responder.",
+     "Faz as alíneas f) a j) do cartão «O teu texto»."
+    ],
+    "material": {
+     "exemplos": [
+      {
+       "titulo": "Um caso inventado: o porteiro e o caderno das entradas",
+       "contexto": "Caso inventado, só para mostrar a forma de um juízo. Não fala de Telmo nem cita Garrett.",
+       "paragrafos": [
+        {
+         "al": "Um juízo:",
+         "t": "O porteiro merece um juízo dividido: ajuda quem chega atrasado, mas falha a regra que aceitou cumprir."
+        },
+        {
+         "al": "Um pormenor que o apoia:",
+         "t": "Abre a porta sem olhar para o caderno das entradas, e o atraso fica por escrever."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "temas_material": {
+   "titulo": "Para os dois temas: os Textos 1 e 2 (falas de <i>Frei Luís de Sousa</i>)",
+   "textos": [
+    "texto-1"
+   ],
+   "onde": [
+    {
+     "id": "texto-2",
+     "titulo": "<span class=\"tt-num\">Texto 2</span> Outras falas que as lições citam",
+     "frases": [
+      "Cada fala vem de uma lição do módulo. Copia-a como está e indica o ato e a cena."
+     ],
+     "citacoes": [
+      {
+       "intro": "Ato I, cena II. Telmo a Madalena (lição F27, cartão «Decide»):",
+       "linhas": [
+        "À fé de escudeiro honrado, senhora D. Madalena, a minha boca não se abre mais."
+       ]
+      },
+      {
+       "intro": "Ato I, cena II. Madalena diz que a ninguém ficou dúvida da morte de D. João. Telmo responde (lição «Quem sabia, e quando», cartão «Ato 1»):",
+       "linhas": [
+        "Senão a mim."
+       ]
+      },
+      {
+       "intro": "Ato I, cena II. Telmo repete as palavras da carta de D. João (o mesmo cartão):",
+       "linhas": [
+        "«Vivo ou morto, Madalena, hei de ver-vos pelo menos ainda uma vez neste mundo.»"
+       ]
+      },
+      {
+       "intro": "Ato II, cena I. Maria a Telmo (lição F27, cartão «Decide»):",
+       "linhas": [
+        "Não sei para que são estes mistérios: cuidam que eu hei de ser sempre criança!"
+       ]
+      },
+      {
+       "intro": "Ato II, cena II. Manuel de Sousa diz o nome do retrato (lição F08, cartão «Decide», em «Ler mais»):",
+       "linhas": [
+        "Aquele era D. João de Portugal, um honrado fidalgo, e um valente cavaleiro."
+       ]
+      },
+      {
+       "intro": "Ato II, cena II. Maria ao pai (o mesmo cartão, em «Ler mais»):",
+       "linhas": [
+        "eu sabia de um saber cá de dentro; ninguém mo tinha dito; e eu queria ficar certa."
+       ]
+      }
+     ],
+     "fonte": "Almeida Garrett, <i>Frei Luís de Sousa</i> (1844), ortografia atualizada, como nas lições. A peça inteira lê-se no livro.",
+     "origem": "m4/licao-m4-f27/index.html, cartão 16 («Decide»: «À fé de escudeiro honrado…», Telmo a Madalena, ato I, cena II; «Não sei para que são estes mistérios…», Maria a Telmo, ato II, cena I); m4/m4-frei-luis-quem-sabia/index.html, cartão 2 («Ato 1», ato I, cena II: «Senão a mim.» e a frase da carta, dentro da fala de Telmo); m4/licao-m4-f08/index.html, cartão 4 («Decide», «Ler mais», cena II: as falas de Manuel e de Maria). Tudo copiado letra a letra."
+    }
+   ]
+  },
+  "depois": [
+   {
+    "id": "o-teu-texto",
+    "nome": "O teu texto",
+    "titulo": "Escreve o teu texto.",
+    "meta": "180 a 240 palavras, sobre o tema A ou o tema B.",
+    "textos": [],
+    "pedido_titulo": "O que o texto leva",
+    "grupos": [
+     {
+      "intro": "Se escolheste o tema A:",
+      "alineas": [
+       "Dá um título ao texto.",
+       "Descreve um momento do espetáculo de que te recordes.",
+       "Relaciona-o com <i>Frei Luís de Sousa</i>, de Garrett: cita uma passagem curta, com ato e cena.",
+       "Explica a tua opinião com pormenores observados e vocabulário teatral preciso.",
+       "Distingue as duas obras e não inventes cenas."
+      ]
+     },
+     {
+      "intro": "Se escolheste o tema B:",
+      "alineas": [
+       "Responde à pergunta: diz que juízo Telmo te merece.",
+       "Explica a tua opinião com pormenores da cena: o que Telmo diz e o que faz.",
+       "Cita uma passagem curta da peça, com ato e cena.",
+       "Usa vocabulário teatral preciso.",
+       "Não inventes falas nem cenas."
+      ]
+     },
+     {
+      "intro": "No fim do texto:",
+      "alineas": [
+       "Escreve o total de palavras."
+      ]
+     }
+    ],
+    "ajudas": [
+     "Palavras do teatro (lição F20): encenação, as escolhas de quem põe o texto em palco; cenografia, o espaço; figurino, a roupa; desenho de luz, a luz; marcação, onde se movem.",
+     "No tema B, uma palavra da lição F08: omissão, calar uma parte do que se sabe, sem dizer nada de falso."
+    ],
+    "citar": "Copia as palavras exatas da peça. Põe-nas entre aspas: «…». Depois, entre parênteses, escreve o ato e a cena.",
+    "exemplos": []
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "texto": "Ficam fora da contagem.",
+   "passos": [
+    "Escreve o que aprendeste.",
+    "Diz onde se vê essa aprendizagem no teu trabalho."
+   ]
+  },
+  "verificar": [
+   "A letra do meu tema (A ou B) está no topo?",
+   "No tema A: o texto tem título e descreve um momento do espetáculo de que me recordo?",
+   "No tema B: o texto responde à pergunta com o meu juízo sobre Telmo?",
+   "Expliquei a minha opinião com pormenores e com um critério?",
+   "Citei uma passagem curta e exata da peça, entre «», com ato e cena?",
+   "Distingui o que é de Garrett do que não é, sem inventar cenas nem falas?",
+   "Usei vocabulário teatral preciso?",
+   "Tenho 180 a 240 palavras, com o total no fim, e revi a escrita?",
+   "Escrevi as duas linhas finais?"
+  ],
+  "entrega": [
+   "Fotografa o texto e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_texto": "O diálogo do retrato e as outras falas já estão nesta página. A peça inteira lê-se no livro. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Tema A",
+    "texto": "Lição F20, <a href=\"../../m4/licao-m4-f20/\">O que só se vê em palco</a>. Relê os dois cartões «Conceito»: a encenação; o facto, a interpretação e a opinião."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F08, <a href=\"../../m4/licao-m4-f08/\">«Ninguém»</a>. Relê «A resposta de Telmo» e a omissão."
+   },
+   {
+    "para": "A promessa de Telmo",
+    "texto": "Lição F27, <a href=\"../../m4/licao-m4-f27/\">Uma ideia precisa de uma prova</a>. Relê «Recusar, contar ou fugir?», o cartão da promessa."
+   },
+   {
+    "para": "Os dois temas",
+    "texto": "<a href=\"../../m4/m4-frei-luis-quem-sabia/\">Quem sabia, e quando</a>: ligar a prova à interpretação."
+   }
+  ],
+  "opcional_titulo": "Experimentar: duas perguntas opcionais",
+  "opcional_rotulo": "Duas perguntas opcionais",
+  "opcionais": [
+   {
+    "pergunta": "Recordas o sentido de uma fala, mas não as palavras. Como a usas?",
+    "opcoes": [
+     {
+      "certa": false,
+      "texto": "Cito a minha versão de memória.",
+      "resposta": "As aspas exigem palavras exatas."
+     },
+     {
+      "certa": true,
+      "texto": "Descrevo-a sem aspas.",
+      "resposta": "A descrição permite usar uma recordação segura sem inventar uma citação."
+     },
+     {
+      "certa": false,
+      "texto": "Atribuo-a a Garrett.",
+      "resposta": "TPC tem outra autoria; confirma Garrett no texto."
+     }
+    ]
+   },
+   {
+    "pergunta": "O que fundamenta um juízo?",
+    "opcoes": [
+     {
+      "certa": false,
+      "texto": "Contar o enredo todo.",
+      "resposta": "O resumo não explica uma avaliação."
+     },
+     {
+      "certa": false,
+      "texto": "Adivinhar a intenção da encenadora.",
+      "resposta": "Interpreta sinais observados; não adivinhes intenções."
+     },
+     {
+      "certa": true,
+      "texto": "Ligar um critério a um pormenor observado.",
+      "resposta": "O exemplo mostra por que razão a avaliação se sustenta."
+     }
+    ]
+   }
+  ]
+ }
+}

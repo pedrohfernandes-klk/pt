@@ -387,7 +387,29 @@ _TAREFAS_FACEIS_M1_1113 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m1-edi
 # antes de todas, com contagem estrita.
 _TAREFAS_FACEIS_M9_1114 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m9-edits-20261114.json').read_text('utf-8'))['files']
 
+# 15/11/2026: a tarefa m4-u2 no molde «mais fácil de fazer», com «Tema A ou B», e «tudo junto» no M4 (o aquecimento, o guia, o índice,
+# o mapa e o portefólio do M4), com o acerto do M8 (os quatro poemas da m8-u1 estão no manual), camada mais recente, por cima das
+# tarefas do M9 mais fáceis de fazer (com a qual partilha os dados das grelhas): desfaz-se antes de todas, com contagem estrita.
+_TAREFA_M4U2_1115 = json.loads((ROOT/'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json').read_text('utf-8'))['files']
+
+def undo_tarefa_m4u2_1115(path, text):
+    # Pela mesma regra das camadas das tarefas mais fáceis de fazer: esta camada está no topo, por isso o ficheiro da árvore é
+    # exatamente a página como ela a deixou (o hash «after» do manifesto, que scripts/verificar_camadas.py e
+    # tests/test_tarefas_faceis_m4.py conferem). Só esse texto se desfaz, com contagem estrita; quem já a desfez (ou entrega um texto
+    # histórico) recebe o texto como o deu.
+    entrada = _TAREFA_M4U2_1115.get(_relative(path))
+    if not entrada or hashlib.sha256(text.replace('\r\n', '\n').encode('utf-8')).hexdigest() != entrada['after_sha256_lf']:
+        return text
+    for edit in reversed(entrada['edits']):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Tarefa m4-u2 com «Tema A ou B» não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_tarefas_faceis_m9_1114(path, text):
+    # 15/11/2026: primeiro a tarefa m4-u2 com «Tema A ou B», que está por cima de todas (partilha os dados das grelhas).
+    text = undo_tarefa_m4u2_1115(path, text)
     # Pela mesma regra das camadas do M3, do M1, do M5, do M6, do M7 e do M8: esta camada está no topo, por isso o ficheiro da árvore é
     # exatamente a página como ela a deixou (o hash «after» do manifesto, que scripts/verificar_camadas.py e
     # tests/test_tarefas_faceis_m9.py conferem). Só esse texto se desfaz, com contagem estrita; quem já a desfez (ou entrega um texto

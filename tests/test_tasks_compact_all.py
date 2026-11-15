@@ -2,7 +2,8 @@
 from pathlib import Path
 import re, unittest
 from test_task_compact_m7 import Compact
-from auditoria_20261028 import undo_tarefas_faceis_m7_1113
+# 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+from auditoria_20261028 import undo_tarefas_faceis_m7_1113, undo_tarefa_m4u2_1115
 ROOT=Path(__file__).resolve().parents[1]
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
 # 28/10/2026 (decisão do docente): o M2 é o piloto do formato com aquecimento e tema à escolha; as suas
@@ -26,6 +27,11 @@ class CompactTasks(unittest.TestCase):
     # auditoria, com contagem estrita. A exigência é a mesma.
     if slug in ('m7-u1','m7-u2'):
      self.assertIn('data-task-facil',text);text=undo_tarefas_faceis_m7_1113(f'tarefas/{slug}/index.html',text)
+    # 15/11/2026: a m4-u2 saiu também do formato compacto (molde «mais fácil de fazer», com «Tema A ou B», camada
+    # tarefa_m4u2_tema_b_20261115, com o seu contrato em tests/test_tarefas_faceis_m4.py); confere-se aqui a forma do retrato compacto,
+    # com essa camada desfeita pela auditoria, com contagem estrita. A exigência é a mesma.
+    if slug=='m4-u2':
+     self.assertIn('data-task-facil',text);text=undo_tarefa_m4u2_1115(f'tarefas/{slug}/index.html',text);self.assertNotIn('data-task-facil',text)
     p=Compact(text)
     self.assertEqual(p.root,['nav','header','section','section'])
     self.assertTrue(p.production_in_header)
