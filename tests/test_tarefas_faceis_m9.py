@@ -10,8 +10,9 @@ M8. Esta camada leva-o ao M9, e este ficheiro exige das duas tarefas do M9 o que
 * DIREITOS DE AUTOR (decisão do docente para todo o M9): <i>Memorial do Convento</i> ainda tem direitos (José Saramago morre em 2010:
   confere-se no mapa do módulo M9, porque nenhuma lição do M9 dá o ano) e não se copia. Cada passagem tem um bloco «Onde está o
   texto» só com as citações curtas que as lições do M9 já publicam, conferidas letra a letra no cartão da lição de origem, e a linha de
-  fonte, que diz onde ler a passagem como a lição o diz («na edição da turma», «no livro»), nunca «no manual» (nenhuma lição do M9 o
-  diz), sem número de página; os excertos longos das lições F01, F02 e F05 não se copiam; nada vem de fora das lições; não há imagens;
+  fonte, que diz onde ler a passagem como a lição o diz («no livro»), nunca «no manual» (nenhuma lição do M9 o diz), sem número de
+  página (15/11/2026: a edição da turma não existe, decisão do docente; lê-se no livro: nenhuma página .html do sítio diz «edição da
+  turma», e as lições F14, F15 e F16 do M9, a página da obra e a lição e o painel da F16 do M8 só mudam nessas frases); os excertos longos das lições F01, F02 e F05 não se copiam; nada vem de fora das lições; não há imagens;
 * os exemplos usam outro caso (os casos inventados dos aquecimentos, com as frases dos aquecimentos, letra a letra), sem palavras dos
   textos da tarefa, sem dar feita nenhuma alínea, sem a resposta certa da pergunta opcional e sem nenhuma resposta do aquecimento;
 * as decisões do docente, em todos os sítios: tempos 10/10/55/15 (quadro, relógios, guia); «com consulta» dito uma vez, no primeiro
@@ -64,14 +65,21 @@ DADOS_AQUECIMENTOS = [f'docs/pedagogia/aquecimentos/{s}.json' for s in SLUGS]
 GUIA, INDICE, MAPA = 'm9/guia-da-tarefa-m9/index.html', 'm9/index.html', 'm9/mapa-do-modulo-m9/index.html'
 PORTEFOLIO = 'm9/portefolio-do-modulo-m9/index.html'
 GUIA_M2, INDICE_M7 = 'm2/guia-da-tarefa-m2/index.html', 'm7/index.html'
-FICHEIROS = DADOS_TAREFAS + [GRELHAS] + PAGINAS + [GUIA, PORTEFOLIO, INDICE, MAPA, GUIA_M2, INDICE_M7]
+# 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+# As lições do M9 que as tarefas citam, a página da obra e a lição e o painel da F16 do M8 (um conto) entram nesta camada.
+LICOES_M9 = [f'm9/licao-m9-f{n}/index.html' for n in ('14', '15', '16')]
+OBRA = 'obras/memorial/index.html'
+CONTO_M8 = ['m8/licao-m8-f16/index.html', 'm8/painel-m8-f16/index.html']
+LIVRO = LICOES_M9 + [OBRA] + CONTO_M8
+FICHEIROS = DADOS_TAREFAS + [GRELHAS] + PAGINAS + [GUIA, PORTEFOLIO, INDICE, MAPA, GUIA_M2, INDICE_M7] + LIVRO
 L = {k: f'm9/licao-m9-f{k}/index.html' for k in ('01', '02', '03', '05', '10', '11', '12', '13', '14', '15', '16')}
 OUTRAS = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3', 'm8-u1', 'm8-u2')
 FORA_DAS_LICOES = {'https://estudoemcasaapoia.dge.mec.pt/recurso/memorial-do-convento-de-jose-saramago-representatividade-de-sociedade-da-epoca-rei-e-rainha'}
 CARTOES_NOMES = ['Começar', 'Tema A ou B', 'O teu plano', 'O teu texto', 'Fechar e entregar', 'Rever a matéria']
 NAO_CONTAM = 'Não contam para as palavras: as passagens citadas ou copiadas, o plano e as duas linhas finais.'
 CONSULTA = 'Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.'
-ANTES_DA_AULA = f'Antes da aula, lê os capítulos{N}I{N}e{N}V de <i>Memorial do Convento</i>, na edição da turma.'
+# 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+ANTES_DA_AULA = f'Antes da aula, lê os capítulos{N}I{N}e{N}V de <i>Memorial do Convento</i>, no livro.'
 MR = '<i>Memorial do Convento</i>'
 # O que cada enunciado de antes pedia, com as suas palavras: cada pedaço está no enunciado de antes e continua no de agora.
 PEDIDOS = {
@@ -117,25 +125,28 @@ PASSOS = {'m9-u1': [['Aprecia o episódio.', 'Distingue os gestos do rei da form
 # [(lição, cartão, frase que a lição tem, letra a letra)] que confirmam o que a linha de fonte e as frases dizem).
 ONDE = {
     'm9-u1': [
+        # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
         ('texto-1', f'{MR}, capítulo{N}I: a miniatura da basílica', [],
-         f'José Saramago, {MR}, capítulo{N}I. Lê o episódio na edição da turma, como diz a lição{N}F14 (cartão «Lê de perto»).',
-         [('14', 4, 'Lê o episódio na edição da turma'), ('14', 4, 'Este resumo não é uma citação do romance.'),
+         f'José Saramago, {MR}, capítulo{N}I. Lê o episódio no livro, como diz a lição{N}F14 (cartão «Lê de perto»).',
+         [('14', 4, 'Lê o episódio no livro'), ('14', 4, 'Este resumo não é uma citação do romance.'),
           ('14', 4, f'Resumo didático do capítulo{N}I')]),
         ('texto-2', f'{MR}, capítulo{N}V: o primeiro auto de fé', [(f'Palavras que a lição{N}F15 cita:', '«a descansada leitura das sentenças»', '15', 4)],
-         f'José Saramago, {MR}, capítulo{N}V. Lê o capítulo na edição da turma, como diz a lição{N}F15 (cartão «Lê de perto»).',
-         [('15', 4, 'Lê o capítulo na edição da turma.'), ('15', 4, f'José Saramago, {MR}, capítulo{N}V.')]),
+         f'José Saramago, {MR}, capítulo{N}V. Lê o capítulo no livro, como diz a lição{N}F15 (cartão «Lê de perto»).',
+         [('15', 4, 'Lê o capítulo no livro.'), ('15', 4, f'José Saramago, {MR}, capítulo{N}V.')]),
     ],
     'm9-u2': [
         ('texto-1', f'{MR}: os nomes dos trabalhadores',
          [(f'Palavras que a lição{N}F05 cita:', '«já não podemos falar-lhes das vidas, por tantas serem, ao menos deixemos os nomes escritos»', '05', 16)],
-         f'José Saramago, {MR} (1982), a viagem da pedra para Mafra. Lê a passagem no livro, na edição da turma. A lição{N}F05 tem um excerto: cartão «O texto, 1 de 3».',
+         # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+         f'José Saramago, {MR} (1982), a viagem da pedra para Mafra. Lê a passagem no livro. A lição{N}F05 tem um excerto: cartão «O texto, 1 de 3».',
          [('05', 5, 'José Saramago, _Memorial do Convento_ (1982), a viagem da pedra para Mafra (excerto).'), ('05', 8, 'Com o livro aberto: a pedra e os nomes'),
           ('05', 8, 'o narrador diz os nomes deles, um a um')]),
         ('texto-2', f'{MR}, capítulo{N}XIX: o episódio de Francisco Marques',
          [(f'Palavras que a lição{N}F16 cita:', '«está a fazer bem o trabalho»', '16', 4),
           (f'Palavras que a lição{N}F05 cita:', '«aquela mulher ali é que é a viúva, não sabemos que nome tem, nem adiantaria nada à história ir lá perguntar-lhe»', '05', 24)],
-         f'José Saramago, {MR}, capítulo{N}XIX. A lição{N}F16 diz onde ler a passagem: cartão «Lê de perto» (o excerto da Porto Editora ou a edição da turma).',
-         [('16', 4, 'Se o acesso não estiver disponível, lê a passagem na edição da turma.'), ('16', 4, 'Lê o excerto na fonte editorial</a>'),
+         # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+         f'José Saramago, {MR}, capítulo{N}XIX. A lição{N}F16 diz onde ler a passagem: cartão «Lê de perto» (o excerto da Porto Editora ou o livro).',
+         [('16', 4, 'Se o acesso não estiver disponível, lê a passagem no livro.'), ('16', 4, 'Lê o excerto na fonte editorial</a>'),
           ('16', 4, 'A passagem apresenta o trabalho de Francisco Marques'), ('05', 24, f'(capítulo{N}XIX)'),
           ('13', 9, f'No capítulo{N}XIX, regressa ao transporte da grande pedra, à morte de Francisco Marques')]),
         ('texto-3', f'{MR}: o papel de Blimunda',
@@ -216,6 +227,16 @@ TROCAS_MODULO = {
     ],
     # 14/11/2026: acerto do M7: «opinião» em vez de «tese» (a m7-u3 diz «opinião» em todo o lado).
     INDICE_M7: [('No fim, defendes uma tese com um verso de <em>Mensagem</em>', 'No fim, defendes uma opinião com um verso de <em>Mensagem</em>', 1)],
+    # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+    # As lições do M9 (no JSON dos cartões), a página da obra e a lição e o painel da F16 do M8 (um conto) só mudam nestas frases.
+    LICOES_M9[0]: [('Lê o episódio na edição da turma, procurando gestos', 'Lê o episódio no livro, procurando gestos', 1),
+                   ('A leitura integral do capítulo faz-se na edição da turma;', 'A leitura integral do capítulo faz-se no livro;', 1)],
+    LICOES_M9[1]: [('Lê o capítulo na edição da turma.', 'Lê o capítulo no livro.', 1)],
+    LICOES_M9[2]: [('Se o acesso não estiver disponível, lê a passagem na edição da turma.', 'Se o acesso não estiver disponível, lê a passagem no livro.', 1)],
+    OBRA: [('Ainda não identificámos o capítulo e a página do excerto na edição da turma.', 'Ainda não identificámos o capítulo e a página do excerto no livro.', 1)],
+    CONTO_M8[0]: [('O resto do conto lê-se na edição da turma.', 'O resto do conto lê-se no livro.', 1),
+                  ('Que pergunta permite prosseguir a leitura da edição da turma?', 'Que pergunta permite prosseguir a leitura do conto?', 1)],
+    CONTO_M8[1]: [('Que pergunta permite prosseguir a leitura da edição da turma?', 'Que pergunta permite prosseguir a leitura do conto?', 1)],
 }
 # As lições que o cartão «Rever a matéria» manda reler: (para, lição, título da lição, secções, frase da secção que a linha resume).
 REVER = {
@@ -823,6 +844,40 @@ class TarefasFaceisM9(unittest.TestCase):
         m7u3 = solto(visivel(ler('tarefas/m7-u3/index.html')))
         self.assertEqual(re.findall(r'[^.]*\btese\b[^.]*\.', m7u3), [' Nas lições, a opinião que defendes chama-se «tese».'])
 
+    def test_a_edicao_da_turma_nao_existe_le_se_no_livro(self):
+        # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+        # Nenhuma página .html do sítio diz «edição da turma»: nem no texto, nem na fonte, nem no JSON dos cartões (com ou sem
+        # entidades, escapes \uXXXX, espaços inseparáveis ou maiúsculas).
+        edicao = re.compile(r'(?i)edi(?:ç|\\u00e7|&ccedil;|&#231;)(?:ã|\\u00e3|&atilde;|&#227;)o(?:\s|\xa0|&nbsp;|\\u00a0)+da(?:\s|\xa0|&nbsp;|\\u00a0)+turma')
+        paginas = sorted(p for p in ROOT.rglob('*.html') if '.git' not in p.relative_to(ROOT).parts)
+        self.assertGreater(len(paginas), 800)
+        for p in paginas:
+            texto = p.read_bytes().decode('utf-8', 'replace')
+            rel = p.relative_to(ROOT).as_posix()
+            self.assertIsNone(edicao.search(texto), rel)
+            self.assertIsNone(edicao.search(html.unescape(texto)), rel)
+            self.assertNotIn('edição da turma', solto(visivel(texto, so_main=False, sem_nav=False)).lower(), rel)
+        # As frases novas, no lugar das antigas, a tratar o aluno por «tu».
+        for slug, rel in zip(SLUGS, ENUNCIADOS):
+            lido = solto(visivel(ler(rel)))
+            self.assertEqual(lido.count('O romance não está nesta página: lê-o no livro. As lições servem para rever a matéria.'), 1, slug)
+            self.assertEqual(json.loads(ler(f'docs/pedagogia/tarefas-escolha/{slug}.json'))['facil']['rever_texto'],
+                             'O romance não está nesta página: lê-o no livro. As lições servem para rever a matéria.')
+        self.assertEqual(ler(ENUNCIADOS[0]).count(ANTES_DA_AULA), 1)
+        self.assertEqual(solto(visivel(ler(ENUNCIADOS[1]))).count('Lê a passagem no livro. A lição F05 tem um excerto'), 1)
+        self.assertNotIn('no livro, na', ler(ENUNCIADOS[1]))
+        self.assertEqual(solto(visivel(ler(OBRA), so_main=False)).count('Ainda não identificámos o capítulo e a página do excerto no livro.'), 1)
+        self.assertEqual(ler(CONTO_M8[0]).count('O resto do conto lê-se no livro.'), 1)
+        # A pergunta do conto tem o mesmo texto na lição e no painel.
+        pergunta = 'Que pergunta permite prosseguir a leitura do conto?'
+        self.assertEqual(ler(CONTO_M8[0]).count(f'"p":"{pergunta}"'), 1)
+        self.assertEqual(ler(CONTO_M8[1]).count(f'<p>{pergunta}</p>'), 1)
+        # Fora destas frases, as seis páginas são as do main, letra a letra (test_guia_portefolio_…), e cada troca é da camada.
+        for rel in LIVRO:
+            self.assertTrue(MANIFESTO['files'][rel]['edits'], rel)
+            self.assertIn(rel, TROCAS_MODULO)
+            self.assertIn('edição da turma', do_main(rel), rel)
+
     # ---------- as regras do texto ----------
 
     def test_regras_do_texto(self):
@@ -976,15 +1031,17 @@ class TarefasFaceisM9(unittest.TestCase):
         self.assertIn('não se edita à mão', MANIFESTO['_nota'])
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
-        self.assertEqual(len(FICHEIROS), 15)
-        self.assertEqual(len(set(FICHEIROS)), 15)
+        # 15/11/2026: 21 ficheiros (os 15 de 14/11/2026 e os 6 da edição da turma, que não existe: lê-se no livro).
+        self.assertEqual(len(FICHEIROS), 21)
+        self.assertEqual(len(set(FICHEIROS)), 21)
         self.assertEqual(len(TROCAS), sum(len(v['edits']) for v in MANIFESTO['files'].values()))
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        self.assertIn(f'{len(TROCAS)} trocas em 15 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
+        self.assertIn(f'{len(TROCAS)} trocas em 21 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         for t in TROCAS:
-            self.assertTrue(t['achado'].startswith('14/11/2026: '), t['local'])
+            # 15/11/2026: as trocas da edição da turma (que não existe; lê-se no livro) datam-se de 15/11/2026.
+            self.assertTrue(t['achado'].startswith('15/11/2026: ' if t['ficheiro'] in LIVRO else '14/11/2026: '), t['local'])
             self.assertEqual(t['ocorrencias'], 1)
             self.assertNotIn('—', t['local'])
         for rel, registo in MANIFESTO['files'].items():
@@ -1126,6 +1183,12 @@ class TarefasFaceisM9(unittest.TestCase):
         for caminho in ("'m9/**'", "'m2/guia-da-tarefa-m2/**'", "'m7/index.html'", "'tarefas/**'", "'scripts/tarefa_facil.py'",
                         "'docs/pedagogia/tarefas-escolha/**'", "'docs/pedagogia/grelhas-tarefas-20261027.json'"):
             self.assertIn(f'      - {caminho}\n', tarefas, caminho)
+        # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro. Os fluxos que já conferiam os dois acertos
+        # correm também quando mudam os seis ficheiros novos da camada.
+        for nome in ('pt-apoios-qa.yml', 'pt-exame-laboratorio-qa.yml', 'pt-tarefas-qa.yml'):
+            fluxo = ler(f'.github/workflows/{nome}')
+            for rel in LIVRO:
+                self.assertEqual(fluxo.count(f"      - '{rel.rsplit('/', 1)[0]}/**'\n"), 1, (nome, rel))
         self.assertEqual(tarefas.count('timeout-minutes: 40'), 1)
         self.assertEqual(re.findall(r'timeout-minutes: \d+', tarefas), re.findall(r'timeout-minutes: \d+', do_main('.github/workflows/pt-tarefas-qa.yml')))
         # Este teste lê o main de partida (git show): os trabalhos que o correm descarregam o histórico (fetch-depth: 0).

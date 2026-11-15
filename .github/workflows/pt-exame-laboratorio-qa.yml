@@ -147,6 +147,14 @@ on:
       # 14/11/2026: os dois acertos desta camada (o guia da tarefa do M2 e o índice do M7).
       - 'm2/guia-da-tarefa-m2/**'
       - 'm7/index.html'
+      # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro. A camada passa a mudar também as lições F14,
+      # F15 e F16 do M9, a página da obra Memorial do Convento e a lição e o painel da F16 do M8.
+      - 'm9/licao-m9-f14/**'
+      - 'm9/licao-m9-f15/**'
+      - 'm9/licao-m9-f16/**'
+      - 'obras/memorial/**'
+      - 'm8/licao-m8-f16/**'
+      - 'm8/painel-m8-f16/**'
       - 'scripts/tarefas_individuais_faceis.py'
       - 'docs/pedagogia/tarefas-individuais/**'
       - 'scripts/tarefa_facil.py'

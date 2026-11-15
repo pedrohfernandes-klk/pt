@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """14/11/2026: as duas tarefas do M9 (m9-u1 e m9-u2) «mais fáceis de fazer», com tudo o que fala delas a usar as mesmas palavras, e
-dois acertos: o guia da tarefa do M2 e o índice do M7.
+dois acertos: o guia da tarefa do M2 e o índice do M7. 15/11/2026: «no livro» onde as páginas diziam «na edição da turma».
 
 O docente aprovou o molde das tarefas «mais fáceis de fazer», publicado no M3 (pedido #201, camada tarefas_faceis_m3_20261112) e
 levado ao M1, ao M5, ao M6, ao M7 e ao M8 (#207, camada tarefas_faceis_m8_20261113). Esta camada leva o mesmo molde ao M9. Cada
@@ -21,7 +21,7 @@ ficheiros também com a revisão dos enunciados (tarefas_claras_20261110), com a
 cuidado_m2_20261108), com o índice da decisão 148 e com as camadas mais antigas do índice, do mapa, do guia e do portefólio: todas a
 desfazem primeiro.
 
-Ficheiros (15):
+Ficheiros (21; 15 até 15/11/2026):
 - os dados: docs/pedagogia/tarefas-escolha/m9-u1.json e m9-u2.json (a chave nova «facil», de onde sai a página; as chaves antigas
   ficam como estavam, para a leitura histórica das camadas de baixo) e docs/pedagogia/grelhas-tarefas-20261027.json
   («autoavaliacao_so_tua», «correcao_estreita» e «trocas_aluno» nas grelhas da m9-u1 e da m9-u2: «plano» onde dizia «núcleo» e
@@ -41,6 +41,16 @@ Ficheiros (15):
   de mim», com dois passos, também nos dois blocos que a nomeiam; os tempos e as tarefas do M2 não mudam);
 - ACERTO DO M7: m7/index.html («No fim, defendes uma opinião com um verso de Mensagem», onde dizia «tese»: a m7-u3 diz «opinião» em
   todo o lado).
+- 15/11/2026, A EDIÇÃO DA TURMA NÃO EXISTE (decisão do docente): o romance e o conto leem-se no livro. Sai «edição da turma» de todo o
+  sítio, com frases que tratam o aluno por «tu»: nos dados e nos enunciados da m9-u1 e da m9-u2 («lê os capítulos I e V de
+  <i>Memorial do Convento</i>, no livro»; «Lê o episódio no livro» e «Lê o capítulo no livro», como dizem as lições F14 e F15; «Lê a
+  passagem no livro.»; «o excerto da Porto Editora ou o livro»; «O romance não está nesta página: lê-o no livro.»), nas lições do M9
+  que as tarefas citam letra a letra (m9/licao-m9-f14/, m9/licao-m9-f15/ e m9/licao-m9-f16/, no JSON dos cartões: «Lê o episódio no
+  livro», «A leitura integral do capítulo faz-se no livro», «Lê o capítulo no livro.», «lê a passagem no livro.»), na página da obra
+  (obras/memorial/: «Ainda não identificámos o capítulo e a página do excerto no livro.») e na lição e no painel da F16 do M8, que
+  são de um conto (m8/licao-m8-f16/ e m8/painel-m8-f16/: «O resto do conto lê-se no livro.» e, nos dois, com o mesmo texto, «Que
+  pergunta permite prosseguir a leitura do conto?»). Estas páginas estavam congeladas: as trocas entram nesta camada, que ainda não
+  está no main; as camadas já publicadas não mudam.
 
 Os aquecimentos da m9-u1 e da m9-u2 (dados e páginas) não mudam: já diziam «Dez minutos», não falam do núcleo nem dos 60 minutos, e
 os seus casos inventados (o diretor que inaugura a biblioteca; a exposição escolar) são os que os exemplos do enunciado novo usam.
@@ -49,9 +59,10 @@ DIREITOS DE AUTOR (decisão do docente para todo o M9): <i>Memorial do Convento<
 2010: o mapa do módulo M9 diz «Azinhaga, 1922–Lanzarote, 2010»; nenhuma lição do M9 dá o ano) e não se copia para a página. Os
 excertos longos das lições F01, F02 e F05 ficam nas lições e não se copiam. Cada passagem tem um bloco «Onde está o texto» com as
 citações curtas que as lições do M9 já publicam, letra a letra, e a linha de fonte, sem número de página. As lições do M9 dizem «na
-edição da turma» ou «no livro», nunca «no manual»: a página diz o mesmo e o cartão da lição que diz onde ler.
+edição da turma» ou «no livro», nunca «no manual»: a página diz o mesmo e o cartão da lição que diz onde ler. 15/11/2026: a edição
+da turma não existe (decisão do docente); as lições e a página dizem «no livro».
 - m9-u1, Texto 1, capítulo I (a miniatura): nenhuma lição cita a passagem; a lição F14 («Lê de perto») dá um resumo e manda ler o
-  episódio na edição da turma;
+  episódio no livro;
 - m9-u1, Texto 2, capítulo V (o primeiro auto de fé): «a descansada leitura das sentenças» (lição F15, «Lê de perto»);
 - m9-u2, Texto 1, os nomes dos trabalhadores: a citação do cartão 16 da lição F05; o excerto fica no cartão «O texto, 1 de 3»;
 - m9-u2, Texto 2, capítulo XIX (Francisco Marques): «está a fazer bem o trabalho» (lição F16, «Lê de perto») e a citação da viúva
@@ -82,7 +93,8 @@ facil-12. As páginas dos outros módulos saem iguais, byte a byte.
 
 O que NÃO muda: as outras tarefas, as suas grelhas, correções e aquecimentos (saem dos mesmos geradores, iguais byte a byte); os
 critérios, os níveis, os exemplos e os pontos das grelhas da m9-u1 e da m9-u2 (as trocas de palavras fazem-se só ao escrever as
-páginas); os aquecimentos do M9; as lições; as tarefas e os tempos do M2.
+páginas); os aquecimentos do M9; as lições (15/11/2026: só as frases da edição da turma, nas F14, F15 e F16 do M9 e na F16 do M8);
+as tarefas e os tempos do M2.
 
 O script tira as trocas da diferença entre a base (cada ficheiro com esta camada desfeita pelo manifesto; antes de haver manifesto,
 o ficheiro no commit de base, lido com git) e a árvore: pode voltar a correr depois de a camada estar aplicada e dá o mesmo JSON.
@@ -123,7 +135,13 @@ INDICE, MAPA = 'm9/index.html', 'm9/mapa-do-modulo-m9/index.html'
 # 14/11/2026: os dois acertos (o guia da tarefa do M2 e o índice do M7).
 GUIA_M2, INDICE_M7 = 'm2/guia-da-tarefa-m2/index.html', 'm7/index.html'
 MODULO = [GUIA, PORTEFOLIO, INDICE, MAPA, GUIA_M2, INDICE_M7]
-FICHEIROS = FICHEIROS_DADOS + PAGINAS + MODULO
+# 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro. As lições do M9 que as tarefas citam, a página da
+# obra e a lição e o painel da F16 do M8 (um conto).
+LICOES_M9 = [f'm9/licao-m9-f{n}/index.html' for n in ('14', '15', '16')]
+OBRA = 'obras/memorial/index.html'
+CONTO_M8 = ['m8/licao-m8-f16/index.html', 'm8/painel-m8-f16/index.html']
+LIVRO = LICOES_M9 + [OBRA] + CONTO_M8
+FICHEIROS = FICHEIROS_DADOS + PAGINAS + MODULO + LIVRO
 
 ACHADOS = {
     'facil': 'O molde «mais fácil de fazer», aprovado pelo docente no M3, chega ao M9: a mesma tarefa, com um pedido por alínea, os '
@@ -131,7 +149,7 @@ ACHADOS = {
              'verificação em perguntas de sim ou não.',
     'direitos': 'Decisão do docente para o M9: <i>Memorial do Convento</i> ainda tem direitos de autor e não se copia; cada passagem tem '
                 'um bloco «Onde está o texto», só com as citações curtas que as lições do M9 já publicam, letra a letra, e a remissão '
-                'para a edição da turma ou para o cartão da lição que diz onde a ler, sem número de página.',
+                'para o livro ou para o cartão da lição que diz onde a ler, sem número de página.',
     'junto': '«Tudo junto» (decisão do docente): as mesmas palavras do enunciado novo («plano» em vez de «núcleo» e de «planificação»; '
              '«duas linhas finais» em vez de «síntese»; «a letra do tema»; «a edição que usaste (a editora e o ano)» em vez de «a '
              'edição consultada»; «decisão» em vez de «tese»; a mesma frase do que não conta para as palavras).',
@@ -148,6 +166,8 @@ ACHADOS = {
     'acerto_m2': 'Acerto do M2 (decisão do docente, 14/11/2026): o guia da tarefa do M2 fica como os do M3 ao M9; só mudam estas '
                  'frases do guia, não as tarefas nem os tempos do M2.',
     'acerto_m7': 'Acerto do M7 (decisão do docente, 14/11/2026): «opinião» em vez de «tese», como a m7-u3 diz em todo o lado.',
+    'livro': '15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro. Sai «edição da turma» de todo o sítio, '
+             'com frases que tratam o aluno por «tu».',
 }
 
 
@@ -303,6 +323,13 @@ def _visivel(s):
 
 
 def nome(rel):
+    # 15/11/2026: os ficheiros da edição da turma.
+    if rel in LICOES_M9:
+        return f'Lição F{rel.split("-f")[1][:2]} do M9'
+    if rel == OBRA:
+        return 'Página da obra Memorial do Convento'
+    if rel in CONTO_M8:
+        return ('Lição' if '/licao-' in rel else 'Painel') + ' F16 do M8'
     m = re.search(r'm(\d)-u(\d)', rel)
     u = f'M{m.group(1)}-U{m.group(2)}' if m else 'M9'
     if rel in DADOS_TAREFAS:
@@ -326,6 +353,8 @@ def nome(rel):
 
 def categorias(rel, antigo, novo):
     cs = set()
+    if rel in LIVRO:
+        return ['livro']
     if rel in (INDICE, MAPA):
         return ['junto']
     if rel == INDICE_M7:
@@ -334,6 +363,8 @@ def categorias(rel, antigo, novo):
         return [c for c in ACHADOS if c in {'acerto_m2', 'sem_auto', 'sem_par'}]
     if rel in DADOS_TAREFAS or rel in ('tarefas/m9-u1/index.html', 'tarefas/m9-u2/index.html'):
         cs |= {'facil', 'direitos', 'tempos', 'junto', 'auto'}
+        if 'edição da turma' in antigo:
+            cs.add('livro')
     elif rel == DADOS_GRELHAS or '/grelha/' in rel or '/correcao/' in rel:
         if 'autoavalia' in novo or 'Aluno</th>' in antigo or 'Diferença entre' in antigo or '<td></td><td></td><td></td>' in antigo:
             cs.add('auto')
@@ -363,7 +394,7 @@ def trocas_do_ficheiro(rel, a, b):
         trecho = _visivel(novo)
         trecho = trecho if len(trecho) <= 90 else trecho[:88].rstrip() + '…'
         trocas.append({'ficheiro': rel, 'local': f'{nome(rel)}: «{trecho}»', 'antigo': antigo, 'novo': novo, 'ocorrencias': 1,
-                       'achado': '14/11/2026: ' + ' '.join(ACHADOS[c] for c in categorias(rel, antigo, novo))})
+                       'achado': ('' if rel in LIVRO else '14/11/2026: ') + ' '.join(ACHADOS[c] for c in categorias(rel, antigo, novo))})
     return trocas
 
 

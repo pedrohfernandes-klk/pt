@@ -8,7 +8,8 @@ tests/browser_tarefas_faceis_m8.py:
   tarefa, o portefólio, o mapa e o índice do M9, o guia do M2 e o índice do M7 também não deslizam;
 * <i>Memorial do Convento</i> ainda tem direitos de autor e não se copia: cada bloco «Onde está o texto» mostra só as citações curtas
   que as lições do M9 publicam (nenhuma, uma ou duas por bloco) e a linha de fonte, sem número de página e sem «manual», que diz onde
-  ler a passagem (a edição da turma, o livro ou o cartão da lição); não há nenhum texto copiado (.tt-versos, .tt-prosa);
+  ler a passagem (o livro ou o cartão da lição; 15/11/2026: a edição da turma não existe, decisão do docente; lê-se no livro, e
+  nenhum enunciado diz «edição da turma»); não há nenhum texto copiado (.tt-versos, .tt-prosa);
 * no guia da tarefa do M9 e no do M2: nas três produções, não há «Autoavaliação» para copiar para o Teams nem «par de trabalho»: a
   regra chama-se «Dois antes de mim» e tem dois passos, e o que se copia para o Teams traz o plano, as notas e a lista; no do M9, os
   quatro blocos somam 90 minutos (10, 10, 55, 15); no do M2, os blocos de sempre (15, 60, 15);
@@ -59,13 +60,15 @@ VISIVEL = '''(sel) => { const e = document.querySelector(sel); if (!e) return fa
 
 
 # O fim da linha de fonte de cada bloco «Onde está o texto» (diz onde ler, como a lição o diz).
-FIM_FONTE = {('m9-u1', '#texto-1'): 'Lê o episódio na edição da turma, como diz a lição' + N + 'F14 (cartão «Lê de perto»).',
-             ('m9-u1', '#texto-2'): 'Lê o capítulo na edição da turma, como diz a lição' + N + 'F15 (cartão «Lê de perto»).',
+# 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+FIM_FONTE = {('m9-u1', '#texto-1'): 'Lê o episódio no livro, como diz a lição' + N + 'F14 (cartão «Lê de perto»).',
+             ('m9-u1', '#texto-2'): 'Lê o capítulo no livro, como diz a lição' + N + 'F15 (cartão «Lê de perto»).',
              ('m9-u2', '#texto-1'): 'A lição' + N + 'F05 tem um excerto: cartão «O texto, 1 de 3».',
-             ('m9-u2', '#texto-2'): 'cartão «Lê de perto» (o excerto da Porto Editora ou a edição da turma).',
+             ('m9-u2', '#texto-2'): 'cartão «Lê de perto» (o excerto da Porto Editora ou o livro).',
              ('m9-u2', '#texto-3'): 'A lição' + N + 'F02 tem um excerto do voo e um do reencontro: cartões «O texto».',
              ('m9-u2', '#texto-4'): 'A lição' + N + 'F12 diz como a procurar no livro: cartão «O que Scarlatti acrescenta».'}
-ANTES_DA_AULA = 'Antes da aula, lê os capítulos' + N + 'I' + N + 'e' + N + 'V de Memorial do Convento, na edição da turma.'
+# 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+ANTES_DA_AULA = 'Antes da aula, lê os capítulos' + N + 'I' + N + 'e' + N + 'V de Memorial do Convento, no livro.'
 
 
 def contexto(browser, largura, altura, esquema):
@@ -189,6 +192,8 @@ def papel(host, browser, slug):
     # Na m9-u1, a ordem de ler os capítulos antes da aula sai em papel, no primeiro cartão.
     if slug == 'm9-u1':
         assert page.locator('header .tf-p', has_text=ANTES_DA_AULA).count() == 1 and page.locator('header .tf-p', has_text=ANTES_DA_AULA).is_visible(), slug
+    # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro.
+    assert 'edição da turma' not in page.evaluate('() => document.body.textContent').replace(N, ' ').lower(), slug
     citacoes = sum(n for _, n, _ in ONDE[slug])
     assert m['onde'] == m['fontes'] == len(ONDE[slug]) and m['citacoes'] == citacoes, (slug, m)
     assert m['pedidos'] == (10 if slug == 'm9-u1' else 12) and m['verificar'] == (9 if slug == 'm9-u1' else 10) and m['passos'] == 4, (slug, m)

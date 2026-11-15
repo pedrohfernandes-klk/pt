@@ -126,7 +126,7 @@
   "entrega_titulo": "Entrega no Teams",
   "rever_titulo": "Se precisares de rever",
   "descricao": "aquecimento, um plano e um texto de opinião que parte do romance, com um tema à escolha",
-  "_nota": "14/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. <i>Memorial do Convento</i> ainda tem direitos de autor (José Saramago morre em 2010: mapa do módulo M9, «Azinhaga, 1922–Lanzarote, 2010»): não se copia. Cada passagem tem um bloco «Onde está o texto», só com as citações curtas que as lições do M9 já publicam, letra a letra, e a linha de fonte, que diz onde a ler, sem número de página: as lições dizem «na edição da turma» ou «no livro», nunca «no manual». Os excertos longos das lições F01, F02 e F05 ficam nas lições e não se copiam. O dossiê antigo não aparece: as condições de consulta passaram a alíneas e a linhas de ajuda do plano e do texto; as ligações continuam nas lições, para onde a página remete.",
+  "_nota": "14/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. <i>Memorial do Convento</i> ainda tem direitos de autor (José Saramago morre em 2010: mapa do módulo M9, «Azinhaga, 1922–Lanzarote, 2010»): não se copia. Cada passagem tem um bloco «Onde está o texto», só com as citações curtas que as lições do M9 já publicam, letra a letra, e a linha de fonte, que diz onde a ler, sem número de página: as lições dizem «no livro», nunca «no manual» (15/11/2026: a edição da turma não existe, decisão do docente; lê-se no livro). Os excertos longos das lições F01, F02 e F05 ficam nas lições e não se copiam. O dossiê antigo não aparece: as condições de consulta passaram a alíneas e a linhas de ajuda do plano e do texto; as ligações continuam nas lições, para onde a página remete.",
   "fazer": [
    "Faz o aquecimento (10 minutos).",
    "Escolhe um tema: A ou B. Os dois partem de <i>Memorial do Convento</i>.",
@@ -211,7 +211,7 @@
          ]
         }
        ],
-       "fonte": "José Saramago, <i>Memorial do Convento</i> (1982), a viagem da pedra para Mafra. Lê a passagem no livro, na edição da turma. A lição F05 tem um excerto: cartão «O texto, 1 de 3».",
+       "fonte": "José Saramago, <i>Memorial do Convento</i> (1982), a viagem da pedra para Mafra. Lê a passagem no livro. A lição F05 tem um excerto: cartão «O texto, 1 de 3».",
        "origem": "m9/licao-m9-f05/index.html, cartão 16 (a citação, letra a letra); a linha de fonte, do cartão 5 («O texto, 1 de 3»: «José Saramago, Memorial do Convento (1982), a viagem da pedra para Mafra (excerto)»); «Com o livro aberto: a pedra e os nomes», do cartão 8 («Para entender»); «um a um», do mesmo cartão"
       },
       {
@@ -234,8 +234,8 @@
          ]
         }
        ],
-       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo XIX. A lição F16 diz onde ler a passagem: cartão «Lê de perto» (o excerto da Porto Editora ou a edição da turma).",
-       "origem": "m9/licao-m9-f16/index.html, cartão 4 («Lê de perto»: «está a fazer bem o trabalho», a ligação para o excerto da Porto Editora e «Se o acesso não estiver disponível, lê a passagem na edição da turma», letra a letra); m9/licao-m9-f05/index.html, cartão 24 (a citação da viúva, letra a letra, «(capítulo XIX)»); o capítulo XIX, também de m9/recursos/f13.js, cartão 9 («Estação 2: a pedra e a viúva»)"
+       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo XIX. A lição F16 diz onde ler a passagem: cartão «Lê de perto» (o excerto da Porto Editora ou o livro).",
+       "origem": "m9/licao-m9-f16/index.html, cartão 4 («Lê de perto»: «está a fazer bem o trabalho», a ligação para o excerto da Porto Editora e «Se o acesso não estiver disponível, lê a passagem no livro», letra a letra); m9/licao-m9-f05/index.html, cartão 24 (a citação da viúva, letra a letra, «(capítulo XIX)»); o capítulo XIX, também de m9/recursos/f13.js, cartão 9 («Estação 2: a pedra e a viúva»)"
       }
      ],
      "notas": []
@@ -389,7 +389,7 @@
    "Confirma que as fotografias mostram o trabalho completo.",
    "Entrega as fotografias na tarefa do Teams."
   ],
-  "rever_texto": "O romance não está nesta página: lê-o na edição da turma. As lições servem para rever a matéria.",
+  "rever_texto": "O romance não está nesta página: lê-o no livro. As lições servem para rever a matéria.",
   "rever": [
    {
     "para": "Texto 1",

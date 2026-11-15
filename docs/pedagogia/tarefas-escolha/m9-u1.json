@@ -122,7 +122,7 @@
   "entrega_titulo": "Entrega no Teams",
   "rever_titulo": "Se precisares de rever",
   "descricao": "aquecimento, um plano e uma apreciação crítica de um episódio do romance, sobre um tema à escolha",
-  "_nota": "14/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. <i>Memorial do Convento</i> ainda tem direitos de autor (José Saramago morre em 2010: mapa do módulo M9, «Azinhaga, 1922–Lanzarote, 2010»): não se copia. Cada passagem tem um bloco «Onde está o texto», só com as citações curtas que as lições do M9 já publicam, letra a letra, e a linha de fonte, que diz onde a ler, sem número de página: as lições dizem «na edição da turma» ou «no livro», nunca «no manual». Os excertos longos das lições F01, F02 e F05 ficam nas lições e não se copiam. O dossiê antigo não aparece: as condições de consulta passaram a alíneas e a linhas de ajuda do plano e do texto; as ligações continuam nas lições, para onde a página remete.",
+  "_nota": "14/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. <i>Memorial do Convento</i> ainda tem direitos de autor (José Saramago morre em 2010: mapa do módulo M9, «Azinhaga, 1922–Lanzarote, 2010»): não se copia. Cada passagem tem um bloco «Onde está o texto», só com as citações curtas que as lições do M9 já publicam, letra a letra, e a linha de fonte, que diz onde a ler, sem número de página: as lições dizem «no livro», nunca «no manual» (15/11/2026: a edição da turma não existe, decisão do docente; lê-se no livro). Os excertos longos das lições F01, F02 e F05 ficam nas lições e não se copiam. O dossiê antigo não aparece: as condições de consulta passaram a alíneas e a linhas de ajuda do plano e do texto; as ligações continuam nas lições, para onde a página remete.",
   "fazer": [
    "Faz o aquecimento (10 minutos).",
    "Escolhe um tema: A ou B. Cada tema é um episódio de <i>Memorial do Convento</i>.",
@@ -131,7 +131,7 @@
    "Escreve duas linhas finais.",
    "Revê e entrega no Teams."
   ],
-  "modo": "Antes da aula, lê os capítulos I e V de <i>Memorial do Convento</i>, na edição da turma. Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "modo": "Antes da aula, lê os capítulos I e V de <i>Memorial do Convento</i>, no livro. Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
   "juntos_em_papel": true,
   "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega. Na grelha, a tua apreciação chama-se «juízo crítico» e os pormenores chamam-se «indícios».",
   "quadro": {
@@ -201,8 +201,8 @@
         "As lições não citam esta passagem: a lição F14 resume o episódio, sem o citar."
        ],
        "citacoes": [],
-       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo I. Lê o episódio na edição da turma, como diz a lição F14 (cartão «Lê de perto»).",
-       "origem": "m9/licao-m9-f14/index.html, cartão 4 («Lê de perto»: «Resumo didático do capítulo I», «Lê o episódio na edição da turma» e «Este resumo não é uma citação do romance», letra a letra); o ano da morte do autor (2010), do mapa do módulo M9"
+       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo I. Lê o episódio no livro, como diz a lição F14 (cartão «Lê de perto»).",
+       "origem": "m9/licao-m9-f14/index.html, cartão 4 («Lê de perto»: «Resumo didático do capítulo I», «Lê o episódio no livro» e «Este resumo não é uma citação do romance», letra a letra); o ano da morte do autor (2010), do mapa do módulo M9"
       }
      ],
      "notas": []
@@ -236,8 +236,8 @@
          ]
         }
        ],
-       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo V. Lê o capítulo na edição da turma, como diz a lição F15 (cartão «Lê de perto»).",
-       "origem": "m9/licao-m9-f15/index.html, cartão 4 («Lê de perto»: a citação, «José Saramago, Memorial do Convento, capítulo V» e «Lê o capítulo na edição da turma», letra a letra); «quem assiste», do cartão 1 da mesma lição"
+       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo V. Lê o capítulo no livro, como diz a lição F15 (cartão «Lê de perto»).",
+       "origem": "m9/licao-m9-f15/index.html, cartão 4 («Lê de perto»: a citação, «José Saramago, Memorial do Convento, capítulo V» e «Lê o capítulo no livro», letra a letra); «quem assiste», do cartão 1 da mesma lição"
       }
      ],
      "notas": []
@@ -350,7 +350,7 @@
    "Confirma que as fotografias mostram o trabalho completo.",
    "Entrega as fotografias na tarefa do Teams."
   ],
-  "rever_texto": "O romance não está nesta página: lê-o na edição da turma. As lições servem para rever a matéria.",
+  "rever_texto": "O romance não está nesta página: lê-o no livro. As lições servem para rever a matéria.",
   "rever": [
    {
     "para": "Tema A",

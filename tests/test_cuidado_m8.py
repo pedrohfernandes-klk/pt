@@ -200,6 +200,13 @@ def ler(rel):
     return undo_tarefas_faceis_m3_1112(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
+def ler_texto(rel, texto):
+    # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro. Um texto (a saída de um gerador) lido como ler()
+    # lê o ficheiro: com as camadas de cima desfeitas, com a mesma contagem estrita.
+    from auditoria_20261028 import undo_tarefas_faceis_m3_1112
+    return undo_tarefas_faceis_m3_1112(rel, texto)
+
+
 def sha_lf(texto):
     return hashlib.sha256(texto.replace('\r\n', '\n').encode('utf-8')).hexdigest()
 
@@ -1279,8 +1286,15 @@ class CuidadoM8(unittest.TestCase):
         for item in LESSONS:
             licao, notas = f"{item['id'][:2]}/licao-{item['id']}/index.html", f"{item['id'][:2]}/painel-{item['id']}/index.html"
             with self.subTest(licao=item['id']):
-                self.assertEqual(gerador_licoes.render(item, unidades), ler(licao))
-                self.assertEqual(gerador_licoes.render_notes(item), ler(notas))
+                # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro. A camada das tarefas do M9 mais fáceis
+                # de fazer (tarefas_faceis_m9_20261114), no topo da pilha, muda as F14, F15 e F16 do M9 e a lição e o painel da F16 do
+                # M8, e as fontes do gerador mudam com ela: o gerador dá a página da árvore, letra a letra, e, lido como esta camada lê
+                # cada ficheiro (com as camadas de cima desfeitas, com contagem estrita), dá a página como esta camada a deixou.
+                gerada, notas_geradas = gerador_licoes.render(item, unidades), gerador_licoes.render_notes(item)
+                self.assertEqual(gerada, (ROOT / licao).read_bytes().decode('utf-8'))
+                self.assertEqual(notas_geradas, (ROOT / notas).read_bytes().decode('utf-8'))
+                self.assertEqual(ler_texto(licao, gerada), ler(licao))
+                self.assertEqual(ler_texto(notas, notas_geradas), ler(notas))
                 self.assertNotIn(notas, MANIFESTO['files'])
                 if item['id'] in GERADAS:
                     self.assertIn(licao, MANIFESTO['files'])
