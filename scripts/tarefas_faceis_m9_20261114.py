@@ -32,8 +32,10 @@ Ficheiros (15):
   no texto e nos quatro blocos; «plano» em vez de «núcleo»; a frase do que não conta para as palavras; sem a «Autoavaliação» que se
   copiava para o Teams e sem «pergunta ao teu par de trabalho»: a regra passa a chamar-se «Dois antes de mim»),
   m9/portefolio-do-modulo-m9/ (saem «autoavaliação /20» e «trabalho de equipa», sem nada no lugar; «plano» e «duas linhas finais»
-  onde dizia «núcleo» e «duas linhas»), m9/index.html («tema A ou B, plano, texto» onde dizia «planificação, tema A ou B», três vezes)
-  e m9/mapa-do-modulo-m9/ («As duas linhas finais fazem parte da entrega» onde dizia «A síntese faz parte da entrega»);
+  onde dizia «núcleo» e «duas linhas»; 15/11/2026, revisão: «duas linhas finais» onde dizia «síntese», três vezes), m9/index.html
+  («tema A ou B, plano, texto» onde dizia «planificação, tema A ou B», três vezes; 15/11/2026, revisão: «as duas linhas finais
+  fazem parte da entrega» onde dizia «a síntese integra a produção» e «com a síntese integrada») e m9/mapa-do-modulo-m9/ («As duas
+  linhas finais fazem parte da entrega» onde dizia «A síntese faz parte da entrega»): nenhuma das quatro páginas diz «síntese»;
 - ACERTO DO M2: m2/guia-da-tarefa-m2/ (só as frases do guia, como nos guias do M3 ao M8: sai o bloco «Autoavaliação» que se copiava
   para o Teams, com o código e o texto copiado que lhe pertencem; sai «pergunta ao teu par de trabalho»; a regra passa a «Dois antes
   de mim», com dois passos, também nos dois blocos que a nomeiam; os tempos e as tarefas do M2 não mudam);
@@ -68,6 +70,12 @@ sai em papel; a verificação final tem no máximo 10 perguntas de sim ou não.
 Os exemplos (regra do docente: sempre com outro caso, sem frases dos textos da tarefa, sem dar feita nenhuma alínea, sem repetir
 respostas do aquecimento): na m9-u1, o caso inventado do aquecimento (o diretor que elogia o silêncio); na m9-u2, o caso inventado do
 aquecimento (a exposição escolar), com uma decisão que não é a do aquecimento (as fotografias lado a lado, não as datas).
+15/11/2026 (revisão): os exemplos da m9-u1 diziam, por outras palavras, o que o aquecimento ensina (a solenidade que se perde, o
+ruído por cima da fala, o que o diretor pensa) e escolhiam a fita como pormenor, que o aquecimento diz que não serve de indício.
+Agora a opinião é outra (a cena tem graça: a biblioteca abre com uma máquina de obras atrás do diretor), os pormenores são
+«inaugura a biblioteca» e «uma máquina de obras», e o procedimento é a ordem das frases (a máquina só aparece na segunda), que o
+aquecimento não trabalha. Na m9-u2, a linha «O teu texto» do cartão «Se precisares de rever» usa as palavras do enunciado
+(«objeção», «resposta») e diz as da lição F10 entre parênteses.
 
 O molde não ganhou chaves: as páginas do M9 usam as do M8 (scripts/tarefa_facil.py) e a folha assets/task-textos.css na versão
 facil-12. As páginas dos outros módulos saem iguais, byte a byte.

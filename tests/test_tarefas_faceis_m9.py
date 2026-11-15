@@ -190,11 +190,18 @@ TROCAS_MODULO = {
     INDICE: [
         ('aquecimento em cartões, planificação, tema A ou B, revisão e fotografias no Teams.', 'aquecimento em cartões, tema A ou B, plano, texto, revisão e fotografias no Teams.', 1),
         ('com consulta: aquecimento, planificação, tema A ou B, revisão e fotografias no Teams.', 'com consulta: aquecimento, tema A ou B, plano, texto, revisão e fotografias no Teams.', 2),
+        # 15/11/2026 (revisão): «tudo junto» também no índice: «duas linhas finais» em vez de «síntese», como no mapa.
+        ('A síntese integra a produção.', 'As duas linhas finais fazem parte da entrega.', 1),
+        ('Cada unidade termina na sua aula de tarefa, com a síntese integrada.', 'Cada unidade termina na sua aula de tarefa, e as duas linhas finais fazem parte da entrega.', 1),
     ],
     MAPA: [('A síntese faz parte da entrega e não cria outro registo de conclusão.', 'As duas linhas finais fazem parte da entrega e não criam outro registo de conclusão.', 1)],
     PORTEFOLIO: [
         (': tema A ou B, núcleo, texto, duas linhas e autoavaliação /20.', ': tema A ou B, plano, texto e duas linhas finais.', 2),
         ('autonomia, responsabilidade, trabalho de equipa, pensamento crítico', 'autonomia, responsabilidade, pensamento crítico', 1),
+        # 15/11/2026 (revisão): «tudo junto» também no portefólio: «duas linhas finais» em vez de «síntese», como no mapa.
+        ('A tarefa da unidade inclui as duas linhas de síntese;', 'A tarefa da unidade inclui as duas linhas finais;', 1),
+        ('Retomas formativas da leitura, sem síntese adicional obrigatória. A síntese integra a tarefa da unidade.',
+         'Retomas formativas da leitura, sem outro registo obrigatório. As duas linhas finais fazem parte da tarefa da unidade.', 2),
     ],
     # 14/11/2026: acerto do M2, só nas frases do guia: sai a «Autoavaliação» que se copiava para o Teams (com o código e o texto
     # copiado que lhe pertencem) e o par de trabalho; «Dois antes de mim», com dois passos, como nos guias do M3 ao M9.
@@ -310,7 +317,27 @@ def respostas_do_aquecimento(aq):
         elif c['t'] == 'sublinhar':
             palavras = c['frase'].split()
             out += [tira(palavras[i]) for i in c.get('certas', []) if i < len(palavras) and len(tira(palavras[i])) > 3]
+        # 15/11/2026 (revisão): também as respostas dos cartões de verdadeiro ou falso (a afirmação, quando é verdadeira) e as
+        # explicações de todos os cartões (os campos f e fe), frase a frase: o exemplo não pode dizer o que o aquecimento explica.
+        if c['t'] == 'vf' and c.get('v'):
+            out.append(tira(c['p']))
+        explicacoes = [c.get('f')] + (c['fe'] if isinstance(c.get('fe'), list) else [c.get('fe')])
+        for e in explicacoes:
+            if e:
+                out += [tira(x) for x in re.split(r'(?<=[.;:!?])\s+', e) if len(tira(x).split()) >= 3]
     return [x for x in out if x]
+
+
+# 15/11/2026 (revisão): as ideias que o aquecimento de cada tarefa já ensina, ditas por outras palavras (raízes). Nenhuma pode
+# aparecer no texto dos exemplos (o caso, que é o mesmo, fica de fora). Na m9-u1: a solenidade ou a pompa que se perde, o ruído
+# por cima da fala (abafar, ouvir, barulho, calma), o contraste e a ironia, o que o diretor pensa ou quer, e a fita e a presença
+# do diretor, que o aquecimento diz que não servem de indício. Na m9-u2: as datas e os anos nas legendas, a linha curta, o texto
+# a mais e o público de fora.
+IDEIAS_DO_AQUECIMENTO = {
+    'm9-u1': r'solen|pompa|cerimón|por cima|abaf|contrast|contrap|ironi|exalt|contest|corrobor|\bcalm|\bouv|\bouç|barulh|ruíd|'
+             r'\belogi|silênci|\bpensa|pensament|\bquer\b|intenç|\bsabia|\bfita\b|presen[çt]|buzin|enfraquec|diminu',
+    'm9-u2': r'\bdatas?\b|\banos?\b|legenda|\blinhas?\b|texto a mais|mais texto|públic|visitant|municipal|enfeit|histór',
+}
 
 
 class Pagina(HTMLParser):
@@ -611,12 +638,15 @@ class TarefasFaceisM9(unittest.TestCase):
                 # Nenhuma resposta do aquecimento está nos exemplos (fora o caso, que é o mesmo), nem uma frase do aquecimento.
                 juntos_min = juntos.lower().replace(EXEMPLOS_DO_AQUECIMENTO[slug][0].lower(), '')
                 respostas = respostas_do_aquecimento(aq)
-                self.assertGreaterEqual(len(respostas), 12)
+                # 15/11/2026 (revisão): com os cartões de verdadeiro ou falso e as explicações, a lista cresce (era 12).
+                self.assertGreaterEqual(len(respostas), 30)
                 for r in respostas:
                     self.assertNotRegex(juntos_min, r'\b' + re.escape(r) + r'\b', (slug, r))
                 for x in f['depois']:
                     for par in x['exemplos'][0]['paragrafos']:
                         self.assertNotIn(solto(par['t']).rstrip('.').lower(), fonte_aq.lower(), par['t'])
+                        # 15/11/2026 (revisão): nem as ideias do aquecimento por outras palavras.
+                        self.assertNotRegex(solto(par['t']).lower(), IDEIAS_DO_AQUECIMENTO[slug], par['t'])
                 certa = [o['texto'] for o in d['opcional']['opcoes'] if o['certa']]
                 self.assertEqual(len(certa), 1)
                 self.assertNotIn(certa[0].rstrip('.'), juntos)
@@ -743,6 +773,14 @@ class TarefasFaceisM9(unittest.TestCase):
         portefolio = solto(visivel(ler(PORTEFOLIO), so_main=False, sem_nav=False))
         self.assertEqual(portefolio.count('tema A ou B, plano, texto e duas linhas finais.'), 2)
         self.assertNotRegex(portefolio, r'(?i)\bnúcleo\b')
+        # 15/11/2026 (revisão): o módulo não fica a meio caminho: nem o índice, nem o mapa, nem o portefólio dizem «síntese»
+        # (no texto visível nem na fonte); as duas linhas finais aparecem nos três.
+        for rel, lido in ((INDICE, indice), (MAPA, mapa), (PORTEFOLIO, portefolio)):
+            self.assertNotRegex(lido, r'(?i)síntese', rel)
+            self.assertNotRegex(ler(rel), r'(?i)síntese', rel)
+            self.assertIn('duas linhas finais', lido, rel)
+        self.assertEqual(indice.count('As duas linhas finais fazem parte da entrega.'), 1)
+        self.assertEqual(portefolio.count('As duas linhas finais fazem parte da tarefa da unidade.'), 2)
         for rel in AQUECIMENTOS + DADOS_AQUECIMENTOS:
             self.assertEqual(ler(rel), do_main(rel), rel)
             self.assertNotRegex(ler(rel), r'(?i)\bnúcleo\b|\bsíntese\b')
@@ -871,6 +909,20 @@ class TarefasFaceisM9(unittest.TestCase):
                         self.assertIn(s, rotulos, (k, s))
                     seccao = ''.join(c.get('html', '') + c.get('titulo', '') for c in arr if c.get('rot') in seccoes)
                     self.assertIn(frase, seccao, (k, frase))
+                    # 15/11/2026 (revisão): nenhuma pontuação dupla depois de um título que acaba em «?» («obra?. Relê»).
+                    self.assertNotRegex(x['texto'], r'[?!]</a>\s*[.,:;]|[?!][.,:;]', x['texto'])
+                self.assertNotRegex(solto(visivel(fonte)), r'[?!]\s*[.,:;]')
+        # 15/11/2026 (revisão): na m9-u2, a linha «O teu texto» diz as palavras do enunciado («objeção», «resposta») e liga-as às
+        # da lição F10, que estão, letra a letra, no seu «Para entender».
+        u2 = json.loads(ler(DADOS_TAREFAS[1]))['facil']
+        linha = [x['texto'] for x in u2['rever'] if x['para'] == 'O teu texto'][0]
+        self.assertTrue(linha.endswith('Relê «Para entender»: a objeção (na lição, «contra-argumento») e a resposta (na lição, «refutação»).'), linha)
+        entender = ''.join(c.get('html', '') for c in cartoes('10') if c.get('rot') == 'Para entender')
+        for termo in ('Contra-argumento', 'Refutação', 'a razão de quem discorda', 'a resposta a essa razão'):
+            self.assertIn(termo, entender, termo)
+        enunciado_u2 = solto(visivel(ler(ENUNCIADOS[1])))
+        for termo in ('Uma objeção é a razão de quem discorda de ti.', 'Responde à objeção.'):
+            self.assertIn(termo, enunciado_u2, termo)
         for slug in OUTRAS:
             self.assertEqual(ler(f'tarefas/{slug}/index.html'), do_main(f'tarefas/{slug}/index.html'))
 
