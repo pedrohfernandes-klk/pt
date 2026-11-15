@@ -73,6 +73,8 @@ M4U2_DE_CIMA = json.loads((ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261
 # e do M8: os ficheiros que ela muda leem-se como estavam por baixo dela (a auditoria desfá-la primeiro, com contagem estrita). A
 # exigência é a mesma.
 SINTESE_DE_CIMA = json.loads((ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json').read_text('utf-8'))['files']
+# 15/11/2026: e a fila final (fila_final_20261115), por cima de todas (muda, entre outras, o guia da tarefa do M2 e os portefólios do M4 e do M8): também se leem os ficheiros dela como estavam por baixo, com contagem estrita.
+FILA_DE_CIMA = json.loads((ROOT / 'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
 DADOS_M4U2 = 'docs/pedagogia/tarefas-escolha/m4-u2.json'  # 15/11/2026: os dados novos da m4-u2 (não são de nenhuma camada)
 BASE_COMMIT = 'f8959def7249a79865345782c813e3e49553acff'
 MANIFESTO = json.loads((ROOT / MANIFESTO_REL).read_text('utf-8'))
@@ -275,7 +277,7 @@ def ler(rel):
     # estrita); os outros, como estão na árvore.
     texto = (ROOT / rel).read_bytes().decode('utf-8')
     # 15/11/2026: e, antes, a da tarefa m4-u2 (a mais recente), nos ficheiros que ela muda.
-    if rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA:  # 15/11/2026: e os da camada das duas linhas finais, por cima de todas
+    if rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA:  # 15/11/2026: e os da camada das duas linhas finais, por cima de todas
         texto = undo_tarefa_m4u2_1115(rel, texto)
     if rel in M9_DE_CIMA:
         texto = undo_tarefas_faceis_m9_1114(rel, texto)
@@ -1013,7 +1015,7 @@ class TarefasFaceisM8(unittest.TestCase):
                 # 14/11/2026: os ficheiros que a camada do M9 muda comparam-se com ela desfeita (ler), com contagem estrita.
                 # 15/11/2026: e os que a camada da tarefa m4-u2 muda, com ela desfeita (ler), com contagem estrita.
                 # 15/11/2026: e os ficheiros da camada das duas linhas finais (sintese_duas_linhas_20261115), por cima de todas, com a mesma exigência.
-                self.assertEqual(ler(rel).encode('utf-8') if rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA else (ROOT / rel).read_bytes(),
+                self.assertEqual(ler(rel).encode('utf-8') if rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA else (ROOT / rel).read_bytes(),
                                  subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout)
                 iguais += 1
         # Nestas pastas, a camada muda nove ficheiros: os dados das grelhas e, de cada tarefa do M8, os dados, o enunciado, a grelha e a

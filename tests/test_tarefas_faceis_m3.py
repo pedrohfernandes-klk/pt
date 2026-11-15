@@ -64,6 +64,8 @@ M9_DE_CIMA = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m9-edits-20261114
 # e do M8: os ficheiros que ela muda leem-se como estavam por baixo dela (a auditoria desfá-la primeiro, com contagem estrita). A
 # exigência é a mesma.
 SINTESE_DE_CIMA = json.loads((ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json').read_text('utf-8'))['files']
+# 15/11/2026: e a fila final (fila_final_20261115), por cima de todas (muda, entre outras, o guia da tarefa do M2 e os portefólios do M4 e do M8): também se leem os ficheiros dela como estavam por baixo, com contagem estrita.
+FILA_DE_CIMA = json.loads((ROOT / 'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
 
 CAMADA_REL = 'scripts/tarefas_faceis_m3_20261112.json'
 MANIFESTO_REL = 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json'
@@ -121,7 +123,7 @@ def ler(rel):
     texto = (ROOT / rel).read_bytes().decode('utf-8')
     # 14/11/2026: e os da camada do M9, que fica por cima de todas (desfeita primeiro pela auditoria).
     # 15/11/2026: e os ficheiros da camada das duas linhas finais (sintese_duas_linhas_20261115), por cima de todas, com a mesma exigência.
-    if rel in M7_DE_CIMA or rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in SINTESE_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M7
+    if rel in M7_DE_CIMA or rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M7
         texto = undo_tarefas_faceis_m7_1113(rel, texto)
     # 13/11/2026: os dados das grelhas levam agora por cima a camada das tarefas do M1 (duas chaves novas nas grelhas do M1). Este
     # teste lê-os como a camada do M3 os deixou: com a do M1 desfeita pela auditoria, com contagem estrita. Nos outros quinze ficheiros

@@ -88,6 +88,8 @@ TAREFA_M4U2 = ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
 # 15/11/2026: por cima de todas, as duas linhas finais em vez da síntese integrada (muda os índices do M1, do M3, do M5, do M6, do M7
 # e do M8).
 SINTESE_DUAS_LINHAS = ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
+# 15/11/2026: por cima de todas, a fila final (muda o índice do M2: «duas linhas finais» em vez de «síntese integrada»).
+FILA_FINAL = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -120,6 +122,12 @@ def base(rel):
     # índice do M4), com contagem estrita.
     # 15/11/2026: antes dessa, as duas linhas finais em vez da síntese integrada (camada sintese_duas_linhas_20261115, a mais recente,
     # que muda os índices do M1, do M3, do M5, do M6, do M7 e do M8), com contagem estrita.
+    # 15/11/2026: e, antes de todas, a fila final (camada fila_final_20261115, a mais recente, que muda o índice do M2), com contagem estrita.
+    if FILA_FINAL.is_file():
+        for edit in reversed(json.loads(FILA_FINAL.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: a fila final já não confere ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
     if SINTESE_DUAS_LINHAS.is_file():
         for edit in reversed(json.loads(SINTESE_DUAS_LINHAS.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
             if texto.count(edit['new']) != edit['occurrences']:

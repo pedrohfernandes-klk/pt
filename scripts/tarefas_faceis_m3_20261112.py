@@ -187,6 +187,14 @@ def ler(rel):
     # 13/11/2026: e por cima da do M1 fica a das tarefas do M5 (tarefas_faceis_m5_20261113), que muda os dados das grelhas e, nos dois
     # acertos do M3, os dados e o enunciado da m3-u2: desfaz-se antes da do M1, com contagem estrita.
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: e, antes de todas, a fila final (fila_final_20261115), que muda o portefólio do M4 e do M8, o guia da tarefa do M2 e
+    # outras páginas que estas camadas também mudam: desfaz-se primeiro, com contagem estrita.
+    fila_final = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
+    if fila_final.is_file():
+        for e in reversed(json.loads(fila_final.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a fila final já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     # 15/11/2026: e por cima de todas fica a das duas linhas finais em vez da síntese integrada (sintese_duas_linhas_20261115), que muda
     # os índices, os portefólios, os mapas e o guia da tarefa do M1, do M3, do M5, do M6, do M7 e do M8: desfaz-se antes de todas, com
     # contagem estrita.

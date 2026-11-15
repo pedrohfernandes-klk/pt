@@ -1,4 +1,5 @@
-"""15/11/2026: a fila final, camada fila_final_20261115 (assets/exame/app.js, assets/exame/sessoes.json e m3/licao-m3-f05/index.html).
+"""15/11/2026: a fila final, camada fila_final_20261115 (assets/exame/app.js, assets/exame/sessoes.json, m3/licao-m3-f05/index.html e, no
+fim do dia, o resto da decisão do docente «síntese integrada» → «duas linhas finais»: 14 ficheiros do M1, do M2, do M4, do M7 e do M8).
 
 Confere:
 - no Exame, que o alvo de cada sessão é «Meta da sessão: …» (a linha da sessão e a versão para imprimir) sem a frase «Não é um limite do exame.» na origem única (falsa nas sessões 24 e 25), e que a
@@ -9,8 +10,11 @@ Confere:
   ficam);
 - na lição M3-F05, que os números 5 e 10 dos versos de «Descalça vai para a fonte» estão no quinto e no décimo verso (e não no rótulo
   «Voltas» nem no oitavo verso);
+- que nenhuma página do M2 (índice, portefólio, mapa e guia da tarefa) diz «síntese integrada» (15/11/2026, decisão do docente), que as
+  peças soltas (todos do M1 e do M7, lição M1-F11, planos das aulas de tarefa do M1 e do M4, portefólios do M4 e do M8) dizem «duas
+  linhas finais», e que os outros usos de «síntese» ficam (perguntas de escolha, «síntese oral ou no caderno», chave «synthesis»);
 - que os 20 rótulos «Item N da prova» ficam com espaço normal (o motor e os testes dependem disso);
-- que a camada é fechada (só os 3 ficheiros, uma ocorrência por troca, o JSON das trocas igual ao manifesto, o script dá o mesmo JSON),
+- que a camada é fechada (só os 17 ficheiros, uma ocorrência por troca, o JSON das trocas igual ao manifesto, o script dá o mesmo JSON),
   reversível até ao main de partida letra a letra e está no topo da pilha, por cima de sintese_duas_linhas_20261115;
 - que as camadas de baixo a desfazem primeiro (auditoria, desligar_sala, a leitura histórica e a leitura dos scripts que partilham
   ficheiros).
@@ -39,7 +43,16 @@ MAIN = '4f4135bf679176c6c8e4abda543837632aad7325'
 APP = 'assets/exame/app.js'
 SESSOES = 'assets/exame/sessoes.json'
 F05 = 'm3/licao-m3-f05/index.html'
-FICHEIROS = [APP, SESSOES, F05]
+EXAME = [APP, SESSOES, F05]
+# 15/11/2026: o resto da decisão «duas linhas finais» em vez de «síntese integrada» (os 14 ficheiros que a camada sintese_duas_linhas_20261115 não tocou).
+M2 = ['m2/index.html', 'm2/portefolio-do-modulo-m2/index.html', 'm2/mapa-do-modulo-m2/index.html', 'm2/guia-da-tarefa-m2/index.html']
+TODOS = ['m1/todos/index.html', 'm7/todos/index.html']
+AULAS = ['m1/aulas/aula-06/index.html', 'm1/aulas/aula-14/index.html', 'm4/aulas/aula-08/index.html', 'm4/aulas/aula-15/index.html',
+         'm4/aulas/aula-18/index.html']
+SOLTAS = TODOS + ['m1/licao-m1-f11/index.html'] + AULAS + ['m4/portefolio-do-modulo-m4/index.html', 'm8/portefolio-do-modulo-m8/index.html']
+FICHEIROS = EXAME + M2 + SOLTAS
+ANTIGAS = ('síntese integrada', 'síntese simples integrada', 'integra a síntese', 'síntese integra', 'Síntese integra',
+           'integram a aula de tarefa')
 NBSP = ' '
 WJ = '⁠'
 
@@ -111,6 +124,56 @@ class FilaFinal(unittest.TestCase):
         self.assertIn('data-l=\\"0-12\\"><span class=\\"n\\">10</span>Vai formosa, e não segura.</span>', texto)
         self.assertIn('Traz a <b class=\\"gt\\" data-s=\\"saia de uso diário\\">vasquinha de cote</b>,', texto)
 
+    def test_o_m2_nao_diz_sintese_integrada(self):
+        # 15/11/2026: decisão do docente: no M2, como no M1, «síntese integrada» e «síntese simples integrada» passam a «duas linhas finais».
+        for rel in M2:
+            texto = ler(rel)
+            for velho in ANTIGAS:
+                self.assertNotIn(velho, texto, f'{rel}: «{velho}»')
+            self.assertIn('duas linhas finais', texto, rel)
+        indice = ler('m2/index.html')
+        self.assertIn('produção em papel, duas linhas finais e fotografias no Teams.', indice)
+        self.assertIn('Cada unidade termina na sua aula de tarefa, com as duas linhas finais.', indice)
+        self.assertEqual(indice.count('trabalho em papel, duas linhas finais e fotografias no Teams.'), 2)
+        portefolio = ler('m2/portefolio-do-modulo-m2/index.html')
+        self.assertIn('uma aula de tarefa, que integra as duas linhas finais;', portefolio)
+        self.assertIn('Reúne os trabalhos e as duas linhas finais já entregues.', portefolio)
+        self.assertEqual(portefolio.count('Recupera as duas linhas finais da aula de tarefa.'), 2)
+        self.assertEqual(portefolio.count('As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever outras.'), 2)
+        self.assertNotIn('Recupera a síntese', portefolio)
+        mapa = ler('m2/mapa-do-modulo-m2/index.html')
+        self.assertEqual(mapa.count('min · duas linhas finais</a>'), 2)
+        self.assertIn('As duas linhas finais ficam no papel do trabalho:', mapa)
+        guia = ler('m2/guia-da-tarefa-m2/index.html')
+        self.assertIn('com duas linhas finais; as retomas', guia)
+        self.assertIn('escreves duas linhas finais no trabalho', guia)
+
+    def test_pecas_soltas_dizem_duas_linhas_finais(self):
+        for rel in TODOS:
+            texto = ler(rel)
+            self.assertIn('com consulta e duas linhas finais.', texto, rel)
+            self.assertNotIn('síntese simples integrada', texto, rel)
+        self.assertIn('As duas linhas finais ficam na Tarefa da Unidade 2.', ler('m1/licao-m1-f11/index.html'))
+        self.assertNotIn('A síntese integra a Tarefa da Unidade 2.', ler('m1/licao-m1-f11/index.html'))
+        for rel in AULAS:
+            texto = ler(rel)
+            self.assertIn('O fecho e as duas linhas finais fazem parte da aula de tarefa.', texto, rel)
+            self.assertNotIn('O fecho e a síntese integram a aula de tarefa.', texto, rel)
+        m4 = ler('m4/portefolio-do-modulo-m4/index.html')
+        self.assertIn('já fotografadas; não escreves outras.', m4)
+        self.assertNotIn('já fotografada; não escreves outra', m4)
+        m8 = ler('m8/portefolio-do-modulo-m8/index.html')
+        self.assertEqual(m8.count('sem linhas a mais obrigatórias.'), 2)
+        self.assertNotIn('sem síntese adicional obrigatória', m8)
+
+    def test_os_outros_usos_de_sintese_ficam(self):
+        # 15/11/2026: ficam as perguntas de escolha das lições, «síntese oral ou no caderno» e a chave interna «synthesis».
+        self.assertIn('Qual das sínteses usa os três recortes', ler('m3/index.html'))
+        for m in (3, 5, 6):
+            self.assertIn('a síntese oral ou no caderno pede duas passagens', ler(f'm{m}/mapa-do-modulo-m{m}/index.html'))
+        for m in (1, 2, 3, 5, 6, 7, 8):
+            self.assertIn('"synthesis":"integrated"', ler(f'm{m}/index.html'), m)
+
     def test_item_n_da_prova_fica_com_espaco_normal(self):
         rotulos = 0
         for prova in ('2026-1f', '2026-2f'):
@@ -123,11 +186,14 @@ class FilaFinal(unittest.TestCase):
     def test_camada_fechada(self):
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
-        self.assertEqual(len(TROCAS), 10)
+        self.assertEqual(len(TROCAS), 35)
+        self.assertEqual(sum(1 for t in TROCAS if t['ficheiro'] in EXAME), 10)
         self.assertEqual(MANIFESTO['base_commit'], MAIN)
         for t in TROCAS:
             self.assertEqual(t['ocorrencias'], 1)
-            self.assertTrue(t['achado'].startswith('15/11/2026: fila final'))
+            self.assertTrue(t['achado'].startswith(('15/11/2026: fila final', '15/11/2026: Decisão do docente')))
+            for velho in ANTIGAS:
+                self.assertNotIn(velho, t['novo'])
             for palavra in ('professor', 'jogar', 'jogo', 'ficha', 'folha', '—'):
                 self.assertNotIn(palavra, t['novo'].lower())
         for rel in FICHEIROS:
@@ -137,16 +203,24 @@ class FilaFinal(unittest.TestCase):
             self.assertEqual(sha_lf(ler(rel)), MANIFESTO['files'][rel]['after_sha256_lf'], rel)
 
     def test_reversivel_ate_ao_main_letra_a_letra(self):
+        # 15/11/2026: os 3 ficheiros do Exame e da M3-F05 voltam ao main; os 14 da decisão «duas linhas finais» voltam à base do manifesto
+        # (as páginas como as deixou o commit anterior, que já trazia as camadas de baixo).
         for rel in FICHEIROS:
             texto = ler(rel)
             for e in reversed(MANIFESTO['files'][rel]['edits']):
                 self.assertEqual(texto.count(e['new']), e['occurrences'], rel)
                 texto = texto.replace(e['new'], e['old'])
-            main = subprocess.run(['git', 'show', f'{MAIN}:{rel}'], cwd=ROOT, capture_output=True, check=True).stdout.decode('utf-8')
-            self.assertEqual(texto, main, rel)
-            self.assertEqual(sha_lf(main), MANIFESTO['files'][rel]['base_sha256_lf'], rel)
-            self.assertEqual(undo_fila_final_1115(rel, ler(rel)), main, rel)
-            self.assertEqual(undo_fila_final_1115(rel, main), main, rel)
+            main = subprocess.run(['git', 'show', f'{MAIN}:{rel}'], cwd=ROOT, capture_output=True, check=True).stdout.decode('utf-8') if rel in EXAME else None
+            if rel in EXAME:
+                self.assertEqual(texto, main, rel)
+                self.assertEqual(sha_lf(main), MANIFESTO['files'][rel]['base_sha256_lf'], rel)
+                self.assertEqual(undo_fila_final_1115(rel, ler(rel)), main, rel)
+                self.assertEqual(undo_fila_final_1115(rel, main), main, rel)
+            else:
+                self.assertEqual(sha_lf(texto), MANIFESTO['files'][rel]['base_sha256_lf'], rel)
+                self.assertEqual(undo_fila_final_1115(rel, ler(rel)), texto, rel)
+                self.assertEqual(undo_fila_final_1115(rel, texto), texto, rel)
+                self.assertTrue(any(v in texto for v in ANTIGAS + ('Síntese de duas linhas', 'síntese adicional', 'já fotografada;')), rel)
 
     def test_o_script_da_o_mesmo_json(self):
         spec = importlib.util.spec_from_file_location('fila_final_20261115', ROOT / 'scripts/fila_final_20261115.py')
@@ -175,6 +249,12 @@ class FilaFinal(unittest.TestCase):
         historico = ler('scripts/tarefas_claras_historico.py')
         self.assertLess(historico.index('por_cima = FILA_FINAL.get(rel)'), historico.index('por_cima = SINTESE_DUAS_LINHAS.get(rel)'))
         for nome in ('cuidado_exame_20261112', 'cidade_cartaz_20261108'):
+            self.assertIn('fila-final-edits-20261115.json', ler(f'scripts/{nome}.py'), nome)
+        # 15/11/2026: e as que partilham o M2, o M4 ou o M8 com o resto da decisão «duas linhas finais» (as tarefas mais fáceis de fazer,
+        # a tarefa m4-u2, o índice da decisão 148 e a própria camada das duas linhas finais).
+        for nome in ('tarefas_faceis_m1_20261113', 'tarefas_faceis_m3_20261112', 'tarefas_faceis_m5_20261113', 'tarefas_faceis_m6_20261113',
+                     'tarefas_faceis_m7_20261113', 'tarefas_faceis_m8_20261113', 'tarefas_faceis_m9_20261114', 'tarefa_m4u2_tema_b_20261115',
+                     'cartaz_indices_148_20261106', 'sintese_duas_linhas_20261115'):
             self.assertIn('fila-final-edits-20261115.json', ler(f'scripts/{nome}.py'), nome)
         # Nas cadeias de --desfazer-antes dos testes e dos fluxos, esta camada vem logo antes das duas linhas finais, sem nada pelo meio.
         cadeia = re.compile(r'--desfazer-antes[ \',]+tests/fixtures/sintese-duas-linhas-edits-20261115\.json')

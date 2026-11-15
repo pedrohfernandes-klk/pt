@@ -85,7 +85,8 @@ class LegacyTaskInstructions(unittest.TestCase):
                     self.assertNotIn(retired,source)
                 self.assertIn('Preparação que se recupera',source)
                 self.assertIn('sem nova entrega obrigatória',source)
-                self.assertIn('O fecho e a síntese integram a aula de tarefa.',source)
+                # 15/11/2026: decisão do docente: «O fecho e as duas linhas finais fazem parte da aula de tarefa.» (fila_final_20261115).
+                self.assertIn('O fecho e as duas linhas finais fazem parte da aula de tarefa.',source)
                 self.assertIn('class="disc"',source)
                 self.assertIn('Critérios',source)
 

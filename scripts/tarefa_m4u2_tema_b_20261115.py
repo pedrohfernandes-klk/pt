@@ -135,6 +135,14 @@ def ler(rel):
     # não partilha ficheiros com esta: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
     # ficheiro como ela o deixou).
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: e, antes dessa, a fila final (fila_final_20261115), que muda o portefólio do M4 (partilha-o com esta camada): desfaz-se
+    # primeiro, com contagem estrita.
+    fila_final = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
+    if fila_final.is_file():
+        for e in reversed(json.loads(fila_final.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a fila final já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     sintese = ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
     if sintese.is_file():
         for e in reversed(json.loads(sintese.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

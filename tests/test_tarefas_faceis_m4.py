@@ -165,6 +165,16 @@ def ler(rel):
     return (ROOT / rel).read_bytes().decode('utf-8')
 
 
+def ler_sem_fila(rel):
+    # 15/11/2026: a fila final (fila_final_20261115) fica por cima desta camada e muda o portefólio do M4: a página desta camada é a da árvore
+    # com ela desfeita.
+    texto = ler(rel)
+    for e in reversed(json.loads(ler(FILAF))['files'].get(rel, {}).get('edits', [])):
+        assert texto.count(e['new']) == e['occurrences'], (rel, e['location'])
+        texto = texto.replace(e['new'], e['old'])
+    return texto
+
+
 def sha_lf(texto):
     return hashlib.sha256(texto.replace('\r\n', '\n').encode('utf-8')).hexdigest()
 
@@ -172,6 +182,11 @@ def sha_lf(texto):
 def antes(rel):
     """O ficheiro como estava por baixo desta camada (desfeita pelo manifesto, com contagem estrita): o main de partida."""
     texto = ler(rel)
+    # 15/11/2026: por cima desta camada fica a fila final (fila_final_20261115), que muda o portefólio do M4 («já fotografadas; não escreves
+    # outras»): desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz.
+    for e in reversed(json.loads(ler(FILAF))['files'].get(rel, {}).get('edits', [])):
+        assert texto.count(e['new']) == e['occurrences'], (rel, e['location'])
+        texto = texto.replace(e['new'], e['old'])
     for e in reversed(MANIFESTO['files'].get(rel, {}).get('edits', [])):
         assert texto.count(e['new']) == e['occurrences'], (rel, e['location'])
         texto = texto.replace(e['new'], e['old'])
@@ -759,8 +774,9 @@ class TarefaM4u2TemaB(unittest.TestCase):
         self.assertEqual(len(FICHEIROS), 14)
         self.assertEqual(len(set(FICHEIROS)), 14)
         self.assertEqual(len(TROCAS), sum(len(v['edits']) for v in MANIFESTO['files'].values()))
-        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar'],
-                           cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+        # 15/11/2026: a fila final desfaz-se primeiro (partilha o portefólio do M4).
+        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
+                            '--desfazer-antes', FILAF], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em 14 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         for t in TROCAS:
@@ -769,7 +785,7 @@ class TarefaM4u2TemaB(unittest.TestCase):
             self.assertNotIn('—', t['local'])
         for rel, registo in MANIFESTO['files'].items():
             with self.subTest(ficheiro=rel):
-                atual = ler(rel)
+                atual = ler_sem_fila(rel)
                 self.assertEqual(sha_lf(atual), registo['after_sha256_lf'])
                 base = antes(rel)
                 self.assertEqual(sha_lf(base), registo['base_sha256_lf'])
@@ -808,7 +824,7 @@ class TarefaM4u2TemaB(unittest.TestCase):
         self.assertEqual(C.BASE_COMMIT, BASE_COMMIT)
         for rel, (a, b) in finais.items():
             self.assertEqual(a, antes(rel), rel)
-            self.assertEqual(b, ler(rel), rel)
+            self.assertEqual(b, ler_sem_fila(rel), rel)
         for nome in ('tarefas_faceis_m9_20261114', 'tarefas_faceis_m8_20261113', 'tarefas_faceis_m7_20261113', 'tarefas_faceis_m6_20261113',
                      'tarefas_faceis_m5_20261113', 'tarefas_faceis_m1_20261113', 'tarefas_faceis_m3_20261112'):
             spec = importlib.util.spec_from_file_location(nome, ROOT / f'scripts/{nome}.py')
